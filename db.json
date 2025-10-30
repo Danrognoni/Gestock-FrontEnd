@@ -1,0 +1,131 @@
+{
+    "usuarios": [
+      {
+        "id": 1,
+        "nombre": "Admin",
+        "apellido": "Principal",
+        "username": "admin",
+        "password": "password123",
+        "rol": "ADMINISTRADOR"
+      },
+      {
+        "id": 2,
+        "nombre": "Juan",
+        "apellido": "Perez",
+        "username": "jperez",
+        "password": "password123",
+        "rol": "EMPLEADO"
+      }
+    ],
+    "proveedores": [
+      {
+        "id": 1,
+        "nombre": "Proveedor Lácteos S.A.",
+        "telefono": "123456789",
+        "email": "contacto@lacteos.com",
+        "direccion": "Calle Falsa 123"
+      },
+      {
+        "id": 2,
+        "nombre": "Distribuidora Bebidas SRL",
+        "telefono": "987654321",
+        "email": "ventas@bebidas.com",
+        "direccion": "Avenida Siempre Viva 742"
+      }
+    ],
+    "descuentos": [
+      {
+        "id": 1,
+        "descripcion": "Oferta fin de semana",
+        "porcentaje": 15.00,
+        "fechaInicio": "2025-10-30",
+        "fechaFin": "2025-11-05"
+      },
+      {
+        "id": 2,
+        "descripcion": "Liquidación de temporada",
+        "porcentaje": 30.50,
+        "fechaInicio": "2025-11-01",
+        "fechaFin": "2025-11-15"
+      }
+    ],
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Leche Entera 1L",
+        "descripcion": "Leche entera pasteurizada",
+        "categoria": "Lácteos",
+        "precio": 120.50,
+        "codigoBarras": "7790010001234",
+        "proveedorId": 1,
+        "descuentoId": 1
+      },
+      {
+        "id": 2,
+        "nombre": "Yogur Frutilla 500g",
+        "descripcion": "Yogur bebible sabor frutilla",
+        "categoria": "Lácteos",
+        "precio": 95.75,
+        "codigoBarras": "7790010001235",
+        "proveedorId": 1,
+        "descuentoId": null
+      },
+      {
+        "id": 3,
+        "nombre": "Gaseosa Cola 2.25L",
+        "descripcion": "Bebida sin alcohol gasificada",
+        "categoria": "Bebidas",
+        "precio": 210.00,
+        "codigoBarras": "7790020003456",
+        "proveedorId": 2,
+        "descuentoId": 1
+      },
+      {
+        "id": 4,
+        "nombre": "Agua Mineral 1.5L",
+        "descripcion": "Agua mineral sin gas",
+        "categoria": "Bebidas",
+        "precio": 80.20,
+        "codigoBarras": "7790020003457",
+        "proveedorId": 2,
+        "descuentoId": 2
+      }
+    ],
+    "existencias": [
+      {
+        "id": 1,
+        "cantidad": 150,
+        "fechaEntrada": "2025-10-20",
+        "fechaVencimiento": "2025-11-10",
+        "productoId": 1
+      },
+      {
+        "id": 2,
+        "cantidad": 200,
+        "fechaEntrada": "2025-10-22",
+        "fechaVencimiento": "2025-11-15",
+        "productoId": 2
+      },
+      {
+        "id": 3,
+        "cantidad": 0,
+        "fechaEntrada": "2025-10-15",
+        "fechaVencimiento": "2026-01-20",
+        "productoId": 3
+      },
+      {
+        "id": 4,
+        "cantidad": 300,
+        "fechaEntrada": "2025-10-01",
+        "fechaVencimiento": "2026-04-01",
+        "productoId": 4
+      },
+      {
+        "id": 5,
+        "cantidad": 50,
+        "fechaEntrada": "2025-10-28",
+        "fechaVencimiento": "2025-11-05",
+        "productoId": 1
+      }
+    ]
+  }
