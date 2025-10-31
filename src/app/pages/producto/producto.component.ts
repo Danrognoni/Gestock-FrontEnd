@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar/navbar.component';
 import { ProductoService } from '../../services/producto.service';
 import { CommonModule } from '@angular/common';
+import { Producto } from '../../model/producto';
 
 @Component({
   selector: 'app-producto',
@@ -15,6 +16,8 @@ export class ProductoComponent implements OnInit{
   Productos: any[] = [];
 
   productoService = inject(ProductoService);
+
+  productoSeleccionado: Producto | null = null;
 
   ngOnInit(): void {
    this.getProductos()
@@ -30,4 +33,16 @@ export class ProductoComponent implements OnInit{
       }
     })
   }
+
+ verDetalle(producto: Producto){
+    this.productoSeleccionado = producto;
+  }
+
+
+
+  cerrarDetalle(){
+    this.productoSeleccionado = null;
+  }
+
+
 }

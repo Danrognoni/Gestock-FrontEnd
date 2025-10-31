@@ -1,16 +1,29 @@
 <h1>Productos</h1>
+<section class="container">
+
 <nav>
 <ul class="productos-list">
   @for(producto of Productos; track producto.id){
-  <li>
-    <img [src]="producto.fotoUrl" [alt]="producto.nombre">
-
-    <h2>{{ producto.nombre }}</h2>
-    <p><strong>Precio:</strong> {{ producto.precio | currency }}</p>
-    <p><strong>Descripción:</strong> {{ producto.descripcion }}</p>
-    <p><strong>Categoría:</strong> {{ producto.categoria }}</p>
+  <li class="lista-productos">
+    <img class="img-producto" [src]="producto.fotoUrl" [alt]="producto.nombre">
+    <button class="button" (click)="verDetalle(producto)">{{ producto.nombre }}</button>
   </li>
   }
-
 </ul>
 </nav>
+
+ @if (productoSeleccionado) {
+  <div class="detalle-producto">
+    <div class="detalle-container">
+      <button class="btn-cerrar" (click)="cerrarDetalle()">X</button>
+      <h1> Nombre : {{ productoSeleccionado.nombre }}</h1>
+      <p> Descripcion : {{ productoSeleccionado.descripcion }}</p>
+      <p>Precio: {{ productoSeleccionado.precio }}</p>
+      <p>Stock: {{ productoSeleccionado.categoria }}</p>
+      <p>Stock: {{ productoSeleccionado.codigoBarras }}</p>
+    </div>
+  </div>
+}
+
+</section>
+
