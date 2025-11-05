@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { ProveedorService } from '../../services/proveedor.service';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { Proveedor } from '../../model/proveedor';
 
 @Component({
   selector: 'app-proveedor',
@@ -13,4 +14,9 @@ export class ProveedorComponent {
   public proveedores = toSignal(this.proveedorService.getProveedores(), {
     initialValue: []
   });
+  public proveedorSeleccionado:Proveedor | null = null;
+
+  verDetalle(proveedor: Proveedor){
+    this.proveedorSeleccionado = proveedor;
+  }
 }

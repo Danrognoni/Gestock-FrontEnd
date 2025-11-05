@@ -13,4 +13,8 @@ export class ProveedorService {
   getProveedores(){
     return this.httpClient.get<Proveedor[]>(this.apiUrl);
   }
+
+  getProveedor(id:number){
+    return this.httpClient.get<Proveedor>(`${this.apiUrl}/${id}`);
+  }
 }
