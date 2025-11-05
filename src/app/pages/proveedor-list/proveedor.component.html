@@ -1,1 +1,10 @@
-
+<section>
+  @for (proveedor of proveedores(); track proveedor.id) {
+  <article>
+    <h2>Nombre: {{proveedor.nombre}}</h2>
+    <p>Teléfono: {{proveedor.telefono}}</p>
+    <p>Email: {{proveedor.email}}</p>
+    <p>Dirección: {{proveedor.direccion}}</p>
+  </article>
+  }
+</section>
