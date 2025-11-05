@@ -1,1 +1,11 @@
-
+<section class="existencia-container">
+  <h1>Existencias</h1>
+  @for(existencia of existencias; track existencia.id){
+      <ul>
+        <li>Cantidad : {{ existencia.cantidad }}</li>
+        <li>Fecha de entrada : {{ existencia.fechaEntrada }}</li>
+        <li>Fecha de vencimiento : {{ existencia.fechaVencimiento }}</li>
+        <li>Id del producto : {{ existencia.productoId }}</li>
+      </ul>
+  }
+</section>
