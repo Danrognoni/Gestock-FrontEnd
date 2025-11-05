@@ -10,6 +10,7 @@
   }
   @if (proveedorSeleccionado) {
   <article>
+    <button (click)="cerrarDetalle()">X</button>
     <h2>Nombre: {{proveedorSeleccionado.nombre}}</h2>
     <h3>Teléfono: {{proveedorSeleccionado.telefono}}</h3>
     <h3>Email: {{proveedorSeleccionado.email}}</h3>

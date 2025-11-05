@@ -19,4 +19,7 @@ export class ProveedorComponent {
   verDetalle(proveedor: Proveedor){
     this.proveedorSeleccionado = proveedor;
   }
+  cerrarDetalle(){
+    this.proveedorSeleccionado = null;
+  }
 }
