@@ -68,7 +68,7 @@ export class ProductoFormComponent {
   postProducts(){
     return this.productService.postProductos(this.productForm.value).subscribe({
       next : (newProduct) =>{
-        this.routes.navigate(['/productos'])
+        this.routes.navigate(['/productos/productoList'])
       },
       error : (e) =>{
         console.error(e);
