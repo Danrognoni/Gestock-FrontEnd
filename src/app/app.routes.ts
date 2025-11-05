@@ -1,19 +1,35 @@
-
-
 import { Routes } from '@angular/router';
-import { ProductoComponent } from './pages/producto-list/producto.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProveedorComponent } from './pages/proveedor-list/proveedor.component';
 import { ExistenciaComponent } from './pages/existencia-list/existencia.component';
 import { DescuentoComponent } from './pages/descuento-list/descuento.component';
+
+
+import { ProductoNavComponent } from './components/producto-nav/producto-nav.component';
+import { ProductoComponent } from './pages/producto-list/producto.component';
 import { ProductoFormComponent } from './pages/producto-form/producto-form.component';
 
 
 export const routes: Routes = [
-  {path :'', component:HomeComponent},
-  { path: 'productos', component:ProductoComponent },
-  {path : 'createProducto', component:ProductoFormComponent},
-   { path: 'proveedores', component:ProveedorComponent },
-   { path: 'existencia', component:ExistenciaComponent },
-   {path:'descuento', component:DescuentoComponent}
+  { path: '', component: HomeComponent },
+
+
+  {
+    path: 'productos',
+    component: ProductoNavComponent,
+    children: [
+      {
+        path: 'productoList',
+        component: ProductoComponent
+      },
+      {
+        path: 'createProducto',
+        component: ProductoFormComponent
+      }
+    ]
+  },
+  { path: 'proveedores', component: ProveedorComponent },
+  { path: 'existencia', component: ExistenciaComponent },
+  { path: 'descuento', component: DescuentoComponent }
+
 ];

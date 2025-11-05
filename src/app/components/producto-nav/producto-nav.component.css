@@ -1,0 +1,55 @@
+/* Poné esto en tu archivo CSS del componente
+  (ej: producto-nav.component.css)
+*/
+
+nav {
+  display: flex; /* 1. Activa Flexbox */
+  justify-content: space-between; /* 2. Envía el h1 y el ul a extremos opuestos */
+  align-items: center; /* 3. Centra todo verticalmente */
+
+  background-color: #2C3E50; /* Un azul oscuro/grisáceo */
+  color: white;
+  padding: 1rem 2rem; /* Espaciado interno (arriba/abajo | izquierda/derecha) */
+  font-family: sans-serif; /* Una fuente limpia, sin serifa */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil abajo */
+}
+
+/* El título */
+nav h1 {
+  margin: 0; /* Quita márgenes por defecto del h1 */
+  font-size: 1.5rem;
+  font-weight: 500; /* Un poco más fino que el 'bold' normal */
+}
+
+/* La lista de links */
+nav ul {
+  display: flex; /* Pone los <li> en horizontal */
+  list-style: none; /* Quita los puntos de la lista */
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin-left: 1.5rem; /* Separación entre los links */
+}
+
+/* Los links <a> */
+nav a {
+  color: #BDC3C7; /* Un gris claro, no tan "fuerte" como el blanco */
+  text-decoration: none; /* Quita el subrayado */
+  font-size: 1rem;
+  transition: color 0.2s ease; /* Transición suave de color al pasar el mouse */
+}
+
+/* Efecto al pasar el mouse */
+nav a:hover {
+  color: white; /* Se pone blanco brillante */
+}
+
+/* Estilo para el link activo (Angular agrega esta clase)
+  ¡Muy recomendado!
+*/
+nav a.active {
+  color: white;
+  font-weight: 700; /* Lo pone en negrita */
+}

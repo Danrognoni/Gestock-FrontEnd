@@ -103,6 +103,126 @@
       "codigoBarras": "566",
       "proveedorId": "4",
       "descuentoId": "5"
+    },
+    {
+      "id": "a708",
+      "nombre": "asads",
+      "descripcion": "adsadsadsads",
+      "categoria": "adsadsadsads",
+      "precio": "adsadsads",
+      "codigoBarras": "adsadsads",
+      "proveedorId": "adsadsads",
+      "descuentoId": "adsads"
+    },
+    {
+      "id": "c706",
+      "nombre": "adsadsadsads",
+      "descripcion": "adsadsadsads",
+      "categoria": "adsadsadsads",
+      "precio": "fafgafa",
+      "codigoBarras": "fafsafsafsfa",
+      "proveedorId": "afsafsafsafs",
+      "descuentoId": "fsafsafsafs"
+    },
+    {
+      "id": "214b",
+      "nombre": "asdddddd",
+      "descripcion": "dddadsadsadsads",
+      "categoria": "adsadsadsadsadsads",
+      "precio": "adsdass",
+      "codigoBarras": "sadsadsadsads",
+      "proveedorId": "ads",
+      "descuentoId": "asd"
+    },
+    {
+      "id": "e3a5",
+      "nombre": "asdddddd",
+      "descripcion": "dddadsadsadsads",
+      "categoria": "adsadsadsadsadsads",
+      "precio": "adsdass",
+      "codigoBarras": "sadsadsadsads",
+      "proveedorId": "ads",
+      "descuentoId": "asd"
+    },
+    {
+      "id": "aa59",
+      "nombre": "asdddddd",
+      "descripcion": "dddadsadsadsads",
+      "categoria": "adsadsadsadsadsads",
+      "precio": "adsdass",
+      "codigoBarras": "sadsadsadsads",
+      "proveedorId": "ads",
+      "descuentoId": "asd"
+    },
+    {
+      "id": "e2fb",
+      "nombre": "asdddddd",
+      "descripcion": "dddadsadsadsads",
+      "categoria": "adsadsadsadsadsads",
+      "precio": "adsdass",
+      "codigoBarras": "sadsadsadsads",
+      "proveedorId": "ads",
+      "descuentoId": "asd"
+    },
+    {
+      "id": "28f3",
+      "nombre": "asdddddd",
+      "descripcion": "dddadsadsadsads",
+      "categoria": "adsadsadsadsadsads",
+      "precio": "adsdass",
+      "codigoBarras": "sadsadsadsads",
+      "proveedorId": "ads",
+      "descuentoId": "asd"
+    },
+    {
+      "id": "5a36",
+      "nombre": "asdddddd",
+      "descripcion": "dddadsadsadsads",
+      "categoria": "adsadsadsadsadsads",
+      "precio": "adsdass",
+      "codigoBarras": "sadsadsadsads",
+      "proveedorId": "ads",
+      "descuentoId": "asd"
+    },
+    {
+      "id": "d3d8",
+      "nombre": "asdddddd",
+      "descripcion": "dddadsadsadsads",
+      "categoria": "adsadsadsadsadsads",
+      "precio": "adsdass",
+      "codigoBarras": "sadsadsadsads",
+      "proveedorId": "ads",
+      "descuentoId": "asd"
+    },
+    {
+      "id": "772e",
+      "nombre": "asdddddd",
+      "descripcion": "dddadsadsadsads",
+      "categoria": "adsadsadsadsadsads",
+      "precio": "adsdass",
+      "codigoBarras": "sadsadsadsads",
+      "proveedorId": "ads",
+      "descuentoId": "asd"
+    },
+    {
+      "id": "7893",
+      "nombre": "adsads",
+      "descripcion": "adsads",
+      "categoria": "adsads",
+      "precio": "adsads",
+      "codigoBarras": "adsads",
+      "proveedorId": "adsads",
+      "descuentoId": "adsads"
+    },
+    {
+      "id": "5dbc",
+      "nombre": "aaaaaaaaaaaaaa",
+      "descripcion": "aaaaaaaaaaaaa",
+      "categoria": "aaaaaaaaaaaaaaaaaaaa",
+      "precio": "aaaaaaaaa",
+      "codigoBarras": "aaaaaaaaaa",
+      "proveedorId": "aaaaaaaaaaa",
+      "descuentoId": "aaaaaaaa"
     }
   ],
   "existencias": [
