@@ -1,1 +1,20 @@
-
+<section>
+  @for (proveedor of proveedores(); track proveedor.id) {
+  <article>
+    <h2>Nombre: {{proveedor.nombre}}</h2>
+    <p>Teléfono: {{proveedor.telefono}}</p>
+    <p>Email: {{proveedor.email}}</p>
+    <p>Dirección: {{proveedor.direccion}}</p>
+    <button (click)="verDetalle(proveedor)">Ver detalles</button>
+  </article>
+  }
+  @if (proveedorSeleccionado) {
+  <article>
+    <button (click)="cerrarDetalle()">X</button>
+    <h2>Nombre: {{proveedorSeleccionado.nombre}}</h2>
+    <h3>Teléfono: {{proveedorSeleccionado.telefono}}</h3>
+    <h3>Email: {{proveedorSeleccionado.email}}</h3>
+    <h3>Dirección: {{proveedorSeleccionado.direccion}}</h3>
+  </article>
+  }
+</section>
