@@ -1,0 +1,24 @@
+<section>
+  <form [formGroup]="proveedorForm" (ngSubmit)="onSubmit()">
+    <fieldset>
+      <legend>Agregar un nuevo proveedor</legend>
+      <label for="nombre">
+        <input type="text" id="nombre" formControlName="nombre">
+        Nombre
+      </label>
+      <label for="telefono">
+        <input type="text" id="telefono" formControlName="telefono">
+        Teléfono
+      </label>
+      <label for="email">
+        <input type="text" id="email" formControlName="email">
+        Email
+      </label>
+      <label for="direccion">
+        <input type="text" id="direccion" formControlName="direccion">
+        Direccion
+      </label>
+    </fieldset>
+    <button type="submit" [disabled]="proveedorForm.invalid">Enviar</button>
+  </form>
+</section>
