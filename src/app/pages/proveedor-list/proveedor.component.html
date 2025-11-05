@@ -8,13 +8,16 @@
     <button (click)="verDetalle(proveedor)">Ver detalles</button>
   </article>
   }
+  </section>
+
   @if (proveedorSeleccionado) {
+    <h2>Detalles de {{proveedorSeleccionado.nombre}}</h2>
   <article>
     <button (click)="cerrarDetalle()">X</button>
-    <h2>Nombre: {{proveedorSeleccionado.nombre}}</h2>
-    <h3>Teléfono: {{proveedorSeleccionado.telefono}}</h3>
-    <h3>Email: {{proveedorSeleccionado.email}}</h3>
-    <h3>Dirección: {{proveedorSeleccionado.direccion}}</h3>
+    <h2>{{proveedorSeleccionado.nombre}}</h2>
+    <h3>{{proveedorSeleccionado.telefono}}</h3>
+    <h3>{{proveedorSeleccionado.email}}</h3>
+    <h3>{{proveedorSeleccionado.direccion}}</h3>
   </article>
   }
-</section>
+

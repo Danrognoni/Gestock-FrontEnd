@@ -1,0 +1,15 @@
+
+section{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+h2 {
+  text-align: center;
+}
+article {
+  margin: 1rem;
+  padding: 1rem;
+  background: #a05d4a;
+  border-radius: 1rem;
+  text-align: center;
+}
