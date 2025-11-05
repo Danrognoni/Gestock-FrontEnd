@@ -35,7 +35,7 @@ export const routes: Routes = [
   { path: 'existencia', component: ExistenciaComponent },
   { path: 'descuento', component: DescuentoComponent }
 
-=======
+,
   {path :'', component:HomeComponent},
   { path: 'productos', component:ProductoComponent },
   {path : 'createProducto', component:ProductoFormComponent},
