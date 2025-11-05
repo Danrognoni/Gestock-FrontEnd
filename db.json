@@ -31,6 +31,13 @@
       "telefono": "987654321",
       "email": "ventas@bebidas.com",
       "direccion": "Avenida Siempre Viva 742"
+    },
+    {
+      "id": "d5dc",
+      "nombre": "Dante",
+      "telefono": "2334424",
+      "email": "dantema@gmail.com",
+      "direccion": "asdasd"
     }
   ],
   "descuentos": [

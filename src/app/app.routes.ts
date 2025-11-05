@@ -8,9 +8,11 @@ import { DescuentoComponent } from './pages/descuento-list/descuento.component';
 import { ProductoNavComponent } from './components/producto-nav/producto-nav.component';
 import { ProductoComponent } from './pages/producto-list/producto.component';
 import { ProductoFormComponent } from './pages/producto-form/producto-form.component';
+import { ProveedorFormComponent } from './pages/proveedor-form/proveedor-form.component';
 
 
 export const routes: Routes = [
+
   { path: '', component: HomeComponent },
 
 
@@ -32,4 +34,12 @@ export const routes: Routes = [
   { path: 'existencia', component: ExistenciaComponent },
   { path: 'descuento', component: DescuentoComponent }
 
+=======
+  {path :'', component:HomeComponent},
+  { path: 'productos', component:ProductoComponent },
+  {path : 'createProducto', component:ProductoFormComponent},
+   { path: 'proveedor', component:ProveedorComponent },
+   {path:'proveedor/create', component:ProveedorFormComponent},
+   { path: 'existencia', component:ExistenciaComponent },
+   {path:'descuento', component:DescuentoComponent}
 ];

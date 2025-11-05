@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Proveedor } from '../model/proveedor';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,5 +17,9 @@ export class ProveedorService {
 
   getProveedor(id:number){
     return this.httpClient.get<Proveedor>(`${this.apiUrl}/${id}`);
+  }
+
+  postProveedor(data: Omit<Proveedor, 'id'>):Observable<Proveedor>{
+    return this.httpClient.post<Proveedor>(this.apiUrl, data);
   }
 }
