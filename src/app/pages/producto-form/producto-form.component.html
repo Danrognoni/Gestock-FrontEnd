@@ -1,1 +1,72 @@
-<p>producto-form works!</p>
+<section class="container">
+  <h1>Agregar nuevo producto</h1>
+  <div class="form-container">
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <div class="formulario">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="id-nombre" formControlName="nombre">
+        @if(nombre?.invalid && (nombre?.touched)){
+        <p class="error-msg">El nombre es obligatorio</p>
+        }
+      </div>
+
+      <div class="formulario">
+        <label for="descripcion">Descripcion</label>
+        <input type="text" id="id-descripcion" formControlName="descripcion">
+        @if(descripcion?.invalid && (descripcion?.touched)){
+        <p class="error-msg">La descripcion es obligatorio</p>
+        }
+      </div>
+
+      <div class="formulario">
+        <label for="categoria">Categoria</label>
+        <input type="text" id="id-categoria" formControlName="categoria">
+        @if(categoria?.invalid && (categoria?.touched)){
+        <p class="error-msg">La categoria es obligatorio</p>
+        }
+      </div>
+
+      <div class="formulario">
+        <label for="precio">Precio</label>
+        <input type="text" id="id-precio" formControlName="precio">
+        @if(precio?.invalid && (precio?.touched)){
+        <p class="error-msg">El precio es obligatorio</p>
+        }
+      </div>
+
+      <div class="formulario">
+        <label for="codigoBarras">Codigo de Barras</label>
+        <input type="text" id="id-codigoBarrras" formControlName="codigoBarras">
+
+      </div>
+
+      <div class="formulario">
+        <label for="proveedorId">proveedor ID</label>
+        <input type="text" id="id-proveedorId" formControlName="proveedorId">
+        @if(proveedorId?.invalid && (proveedorId?.touched)){
+        <p class="error-msg">El proveedor ID es obligatorio</p>
+        }
+
+      </div>
+
+      <div class="formulario">
+
+        <label for="descuentoId">Descuento ID</label>
+        <input type="text" id="id-descuentoId" formControlName="descuentoId">
+        @if(descuentoId?.invalid && (descuentoId?.touched)){
+        <p class="error-msg">El descuento ID es obligatorio</p>
+        }
+
+      </div>
+
+      <div class="form-actions">
+        <a routerLink="/events" class="boton-cancelo">Cancelar</a>
+        <button type="submit" class="btn-primary" [disabled]="productForm.invalid">
+          Guardar Producto
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
