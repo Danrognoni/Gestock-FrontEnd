@@ -1,1 +1,13 @@
+<h1>Descuentos</h1>
+<nav class="descuento-card">
+  @for(descuento of descuentos; track descuento.id){
+  <ul class="lista-descuentos">
+     <h1> Descripcion : {{ descuento.descripcion }}</h1>
+      <p>Precio: {{ descuento.porcentaje }}</p>
+      <p>Stock: {{ descuento.fechaInicio }}</p>
+      <p>Stock: {{ descuento.fechaFin }}</p>
+  </ul>
+  }
+</nav>
+
 
