@@ -8,6 +8,7 @@ import { DescuentoComponent } from './pages/descuento-list/descuento.component';
 import { ProductoNavComponent } from './components/producto-nav/producto-nav.component';
 import { ProductoComponent } from './pages/producto-list/producto.component';
 import { ProductoFormComponent } from './pages/producto-form/producto-form.component';
+import { ExistenciaFormComponent } from './pages/existencia-form/existencia-form.component';
 import { ProveedorFormComponent } from './pages/proveedor-form/proveedor-form.component';
 
 
@@ -41,5 +42,6 @@ export const routes: Routes = [
    { path: 'proveedor', component:ProveedorComponent },
    {path:'proveedor/create', component:ProveedorFormComponent},
    { path: 'existencia', component:ExistenciaComponent },
+   { path: 'createExistencia', component: ExistenciaFormComponent},
    {path:'descuento', component:DescuentoComponent}
 ];
