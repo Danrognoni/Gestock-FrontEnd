@@ -10,6 +10,10 @@ import { ProductoComponent } from './pages/producto-list/producto.component';
 import { ProductoFormComponent } from './pages/producto-form/producto-form.component';
 import { ExistenciaFormComponent } from './pages/existencia-form/existencia-form.component';
 import { ProveedorFormComponent } from './pages/proveedor-form/proveedor-form.component';
+import { ExistenciaNavComponent } from './components/existencia-nav/existencia-nav.component';
+import { ProveedorNavComponent } from './components/proveedor-nav/proveedor-nav.component';
+import { DescuentoNavComponent } from './components/descuento-nav/descuento-nav.component';
+import { DescuentoFormComponent } from './pages/descuento-form/descuento-form.component';
 
 
 export const routes: Routes = [
@@ -31,17 +35,40 @@ export const routes: Routes = [
       }
     ]
   },
-  { path: 'proveedores', component: ProveedorComponent },
-  { path: 'existencia', component: ExistenciaComponent },
-  { path: 'descuento', component: DescuentoComponent }
+
+  { path: 'proveedores', component: ProveedorNavComponent,
+    children : [
+      {
+        path : 'proveedorList', component : ProveedorComponent
+      },
+      {
+        path : 'createProveedor', component : ProveedorFormComponent
+      }
+    ]
+  },
+
+  { path: 'existencia', component: ExistenciaNavComponent,
+    children : [
+      {
+        path : 'existenciaList', component : ExistenciaComponent
+      },
+      {
+        path : 'createExistencia', component : ExistenciaFormComponent
+      }
+    ]
+  },
+  { path: 'descuento', component: DescuentoNavComponent,
+    children : [
+      {
+        path : 'descuentoList', component:DescuentoComponent
+      },
+      {
+        path : 'createDescuento', component:DescuentoFormComponent
+      }
+    ]
+   }
 
 ,
   {path :'', component:HomeComponent},
-  { path: 'productos', component:ProductoComponent },
-  {path : 'createProducto', component:ProductoFormComponent},
-   { path: 'proveedor', component:ProveedorComponent },
-   {path:'proveedor/create', component:ProveedorFormComponent},
-   { path: 'existencia', component:ExistenciaComponent },
-   { path: 'createExistencia', component: ExistenciaFormComponent},
-   {path:'descuento', component:DescuentoComponent}
+
 ];
