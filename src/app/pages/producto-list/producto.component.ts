@@ -23,16 +23,19 @@ export class ProductoComponent implements OnInit{
    this.getProductos()
   }
 
-  getProductos(){
-    this.productoService.getProductos().subscribe({
-      next : (data)  => {
-        this.Productos= data;
-      },
-      error : (e)=>{
-        console.log(e);
-      }
-    })
-  }
+ getProductos() {
+  console.log('Botón "Limpiar" clickeado. Pidiendo productos...'); // <-- AGREGA ESTO
+
+  this.productoService.getProductos().subscribe({
+    next: (data) => {
+      console.log('Datos recibidos:', data); // <-- AGREGA ESTO
+      this.Productos = data;
+    },
+    error: (e) => {
+      console.error('ERROR al pedir productos:', e); // <-- MEJORA ESTO
+    }
+  });
+}
 
  verDetalle(producto: Producto){
     this.productoSeleccionado = producto;
@@ -43,6 +46,8 @@ export class ProductoComponent implements OnInit{
   cerrarDetalle(){
     this.productoSeleccionado = null;
   }
+
+
 
 
 
