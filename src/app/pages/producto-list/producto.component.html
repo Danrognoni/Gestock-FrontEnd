@@ -6,26 +6,12 @@
   @for(producto of Productos; track producto.id){
   <li class="lista-productos">
     <img class="img-producto" [src]="producto.fotoUrl" [alt]="producto.nombre">
-    <button class="button" (click)="verDetalle(producto)">{{ producto.nombre }}</button>
+    <button class="button" (click)="verDetalle(producto.id)">{{ producto.nombre }}</button>
   </li>
   }
 </ul>
 </nav>
 
- @if (productoSeleccionado) {
-  <div class="detalle-producto">
-    <div class="detalle-container">
-      <button class="btn-cerrar" (click)="cerrarDetalle()">X</button>
-      <h1> Nombre : {{ productoSeleccionado.nombre }}</h1>
-      <p> Descripcion : {{ productoSeleccionado.descripcion }}</p>
-      <p>Precio: {{ productoSeleccionado.precio }}</p>
-      <p>Stock: {{ productoSeleccionado.categoria }}</p>
-      <p>Stock: {{ productoSeleccionado.codigoBarras }}</p>
-    </div>
-  </div>
-
-
-}
 
 </section>
 

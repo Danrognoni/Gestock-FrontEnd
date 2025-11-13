@@ -25,4 +25,9 @@ export class ProductoService {
       return this.http.post<Producto>(this.apiurl, data);
   }
 
+  getProductoById(id : number){
+    const url = `${this.apiurl}/${id}`; 
+    return this.http.get<any>(url);
+  }
+
 }

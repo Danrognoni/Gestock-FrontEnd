@@ -1,1 +1,12 @@
-<p>producto-detail works!</p>
+@if (producto(); as producto) {
+    <div class="detalle-producto">
+      <div class="detalle-container">
+        <button class="btn-cerrar" (click)="volver()">Volver</button>
+        <h1> Nombre : {{ producto.nombre }}</h1>
+        <p> Descripcion : {{ producto.descripcion }}</p>
+        <p>Precio: {{ producto.precio }}</p>
+        <p>Stock: {{ producto.categoria }}</p>
+        <p>Stock: {{ producto.codigoBarras }}</p>
+      </div>
+    </div>
+}

@@ -18,4 +18,9 @@ export class DescuentoService {
   getDescuentos(){
     return this.http.get<Descuento[]>(this.apiURL);
   }
+
+  getDescuentoById(id : number){
+    const url = `${this.apiURL}/${id}`; 
+    return this.http.get<any>(url);
+  }
 }

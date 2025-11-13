@@ -14,6 +14,7 @@ import { ExistenciaNavComponent } from './components/existencia-nav/existencia-n
 import { ProveedorNavComponent } from './components/proveedor-nav/proveedor-nav.component';
 import { DescuentoNavComponent } from './components/descuento-nav/descuento-nav.component';
 import { DescuentoFormComponent } from './pages/descuento-form/descuento-form.component';
+import { ProductoDetailComponent } from './pages/producto-detail/producto-detail.component';
 
 
 export const routes: Routes = [
@@ -32,6 +33,9 @@ export const routes: Routes = [
       {
         path: 'createProducto',
         component: ProductoFormComponent
+      },
+      {
+        path : 'productoDetail/:id', component:ProductoDetailComponent
       }
     ]
   },

@@ -21,4 +21,9 @@ export class ExistenciaService {
   postExistencias(data: Omit<Existencia, 'id'>): Observable<Existencia>{
     return this.http.post<Existencia>(this.apiUrl, data);
   }
+
+  getExistenciaById(id : number){
+    const url = `${this.apiUrl}/${id}`; 
+    return this.http.get<any>(url);
+  }
 }

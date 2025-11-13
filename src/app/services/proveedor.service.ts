@@ -22,4 +22,9 @@ export class ProveedorService {
   postProveedor(data: Omit<Proveedor, 'id'>):Observable<Proveedor>{
     return this.httpClient.post<Proveedor>(this.apiUrl, data);
   }
+
+  getProveedorById(id : number){
+    const url = `${this.apiUrl}/${id}`; 
+    return this.httpClient.get<any>(url);
+  }
 }
