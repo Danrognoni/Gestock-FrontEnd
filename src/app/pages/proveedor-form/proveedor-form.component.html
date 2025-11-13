@@ -2,23 +2,50 @@
   <form [formGroup]="proveedorForm" (ngSubmit)="onSubmit()">
     <fieldset>
       <legend>Agregar un nuevo proveedor</legend>
-      <label for="nombre">
+      <div class="formulario">
+        <label for="nombre">Nombre
         <input type="text" id="nombre" formControlName="nombre">
-        Nombre
-      </label>
-      <label for="telefono">
-        <input type="text" id="telefono" formControlName="telefono">
-        Teléfono
-      </label>
-      <label for="email">
+        </label>
+        @if(nombre?.invalid && nombre?.touched){
+            @if(nombre?.hasError('required')){
+            <p class="msg-error">El nombre del proveedor es obligatorio</p>
+            }
+        }
+      </div>
+      <div class="formulario">
+        <label>Teléfono
+        <input type="number" id="telefono" formControlName="telefono">
+        </label>
+        @if(telefono?.invalid && telefono?.touched){
+            @if(telefono?.hasError('required')){
+              <p class="msg-error">El número del proveedor es obligatorio</p>
+            }
+        }
+      </div>
+      <div class="formulario">
+        <label>Email
         <input type="text" id="email" formControlName="email">
-        Email
-      </label>
-      <label for="direccion">
+        </label>
+        @if(email?.invalid && email?.touched){
+            @if(email?.hasError('required')){
+              <p class="msg-error">El email del proveedor es obligatorio</p>
+            }
+            @if(email?.hasError('email')){
+              <p class="msg-error">El email ingresado es invalido</p>
+            }
+          }
+      </div>
+      <div class="formulario">
+        <label>Dirección
         <input type="text" id="direccion" formControlName="direccion">
-        Direccion
-      </label>
+          @if(direccion?.invalid && direccion?.touched){
+            @if(direccion?.hasError('required')){
+              <p class="msg-error">La dirección es obligatoria</p>
+            }
+          }
+        </label>
+      </div>
     </fieldset>
-    <button type="submit" [disabled]="proveedorForm.invalid">Enviar</button>
+    <button type="submit" [disabled]="proveedorForm.invalid">Guardar</button>
   </form>
 </section>

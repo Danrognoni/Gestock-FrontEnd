@@ -4,4 +4,5 @@ export interface Proveedor {
   telefono:string;
   email:string;
   direccion:string;
+  imagen:string;
 }
