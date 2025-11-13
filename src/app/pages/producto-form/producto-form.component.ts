@@ -35,6 +35,7 @@ export class ProductoFormComponent implements OnInit {
       categoria : ['', Validators.required],
       precio : ['', [Validators.required, Validators.min(1)]],
       codigoBarras : [''],
+      fotoUrl : ['']
     })
   }
 
