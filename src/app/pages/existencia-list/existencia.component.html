@@ -1,11 +1,42 @@
 <section class="existencia-container">
   <h1>Existencias</h1>
-  @for(existencia of existencias; track existencia.id){
-      <ul>
-        <li>Cantidad : {{ existencia.cantidad }}</li>
-        <li>Fecha de entrada : {{ existencia.fechaEntrada }}</li>
-        <li>Fecha de vencimiento : {{ existencia.fechaVencimiento }}</li>
-        <li>Id del producto : {{ existencia.productoId }}</li>
-      </ul>
-  }
+
+  <div class="existencias-grid">
+
+    @for (existencia of existencias; track existencia.id) {
+      <article class="existencia-card">
+
+        <header class="card-header">
+          @for(producto of productos();track producto.id){
+            @if(producto.id == existencia.productoId){
+              <h3>Producto : {{ producto.nombre }}</h3>
+            }
+          }
+
+        </header>
+
+        <div class="card-body">
+          <div class="data-item">
+            <span class="data-label">Cantidad:</span>
+            <span class="data-value">{{ existencia.cantidad }}</span>
+          </div>
+
+          <div class="data-item">
+            <span class="data-label">Fecha de Entrada:</span>
+            <span class="data-value">{{ existencia.fechaEntrada }}</span>
+          </div>
+
+          <div class="data-item">
+            <span class="data-label">Fecha de Vencimiento:</span>
+            <span class="data-value">{{ existencia.fechaVencimiento }}</span>
+          </div>
+        </div>
+
+      </article>
+    } @empty {
+      <p class="empty-state">No se encontraron existencias.</p>
+    }
+
+  </div>
 </section>
+

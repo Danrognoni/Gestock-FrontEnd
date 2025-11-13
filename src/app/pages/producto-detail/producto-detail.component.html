@@ -1,12 +1,31 @@
 @if (producto(); as producto) {
-    <div class="detalle-producto">
-      <div class="detalle-container">
-        <button class="btn-cerrar" (click)="volver()">Volver</button>
-        <h1> Nombre : {{ producto.nombre }}</h1>
-        <p> Descripcion : {{ producto.descripcion }}</p>
-        <p>Precio: {{ producto.precio }}</p>
-        <p>Stock: {{ producto.categoria }}</p>
-        <p>Stock: {{ producto.codigoBarras }}</p>
+  <div class="detalle-container">
+
+    <button (click)="volver()" class="btn-volver">Volver</button>
+
+    <div class="comic-detalle">
+
+      <div class="detalle-imagen">
+        <img [src]="producto.fotoUrl" [alt]="producto.nombre">
       </div>
+
+      <div class="detalle-info">
+        <h1 class="info-title">{{ producto.nombre }}</h1>
+
+        <p class="info-description">{{ producto.descripcion }}</p>
+
+        <p class="info-authors"><strong>Categoría:</strong> {{ producto.categoria }}</p>
+        <p class="info-authors"><strong>Código:</strong> {{ producto.codigoBarras }}</p>
+
+        <div class="info-footer">
+          <span class="info-genre">Producto</span>
+          <span class="info-price">{{ producto.precio | currency:'$' }}</span>
+        </div>
+      </div>
+
     </div>
+
+  </div>
+} @else {
+  <p class="cargando">Cargando detalles del producto...</p>
 }

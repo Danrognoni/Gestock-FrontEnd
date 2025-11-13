@@ -1,0 +1,96 @@
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+
+.existencia-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.existencia-container h1 {
+  color: #222;
+  margin-bottom: 24px;
+}
+
+
+.existencias-grid {
+  display: grid;
+
+
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+  gap: 24px;
+}
+
+
+.existencia-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.existencia-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.card-header {
+  background-color: #f9f9f9;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.card-header h3 {
+  margin: 0;
+  color: #0056b3;
+}
+
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+.data-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.data-label {
+  font-weight: 600;
+  color: #555;
+  font-size: 0.95em;
+}
+
+.data-value {
+  font-weight: 500;
+  color: #111;
+
+}
+
+
+.empty-state {
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+  color: #777;
+  font-style: italic;
+  background-color: #fff;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+}

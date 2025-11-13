@@ -7,4 +7,5 @@ export interface Producto {
   codigoBarras:string;
   proveedorId:number;
   descuentoId:number;
+  fotoUrl : string;
 }

@@ -18,7 +18,16 @@ export class ProveedorComponent {
   });
   public proveedorSeleccionado:Proveedor | null = null;
 
+
+  verDetalle(proveedor: Proveedor){
+    this.proveedorSeleccionado = proveedor;
+  }
+
+  cerrarDetalle(){
+    this.proveedorSeleccionado = null;
+
   proveedorDetail(id: number){
     this.router.navigate(['proveedores/proveedorDetail/', id]);
+
   }
 }

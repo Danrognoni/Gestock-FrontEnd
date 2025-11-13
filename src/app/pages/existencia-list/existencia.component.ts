@@ -1,7 +1,9 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { ExistenciaService } from '../../services/existencia.service';
 import { Router } from '@angular/router';
 import { Existencia } from '../../model/existencia';
+import { ProductoService } from '../../services/producto.service';
+import { Producto } from '../../model/producto';
 
 @Component({
   selector: 'app-existencia',
@@ -13,12 +15,15 @@ export class ExistenciaComponent implements OnInit{
   public existenciaService= inject(ExistenciaService);
   existencias: any[] = [];
   private route = inject(Router);
-   existenciaSeleccionado: Existencia | null = null;
+  existenciaSeleccionado: Existencia | null = null;
+  public productoService = inject(ProductoService);
+  public productos = signal<Producto[]>([]);
 
   constructor(){}
 
   ngOnInit(): void {
     this.getExistencias();
+    this.getProductos();
   }
 
   getExistencias(){
@@ -41,4 +46,17 @@ export class ExistenciaComponent implements OnInit{
   cerrarDetalle(){
     this.existenciaSeleccionado = null;
   }
+
+   getProductos() {
+  this.productoService.getProductos().subscribe({
+    next: (data) => {
+      console.log('Datos recibidos:', data);
+      this.productos.set(data);
+    },
+    error: (e) => {
+      console.error('ERROR al pedir productos:', e);
+    }
+  });
+}
+
 }

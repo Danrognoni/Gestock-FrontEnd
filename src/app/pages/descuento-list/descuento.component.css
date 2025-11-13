@@ -1,0 +1,102 @@
+
+.descuentos-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.descuentos-container h1 {
+  text-align: center;
+  color: #f1f1f1;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+
+.descuentos-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+
+.descuento-card {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  border: 1px solid #2a2a2a;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.descuento-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6),
+    0 0 15px rgba(109, 93, 224, 0.3);
+}
+
+
+.card-header {
+  padding: 20px;
+
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  color: #6D5DE0;
+}
+
+
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+.data-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.data-label {
+  font-weight: 600;
+  color: #c0c0c0;
+}
+
+.data-value {
+  font-weight: 500;
+  color: #f1f1f1;
+
+  font-size: 1.1rem;
+}
+
+
+.data-item:first-child .data-value {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #34d399;
+}
+
+
+.empty-state {
+  color: #777;
+  font-style: italic;
+  text-align: center;
+  padding: 40px;
+
+  grid-column: 1 / -1;
+}

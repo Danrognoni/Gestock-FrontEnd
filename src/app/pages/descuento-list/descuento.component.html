@@ -1,13 +1,37 @@
-<h1>Descuentos</h1>
-<nav class="descuento-card">
-  @for(descuento of descuentos; track descuento.id){
-  <ul class="lista-descuentos">
-     <h1> Descripcion : {{ descuento.descripcion }}</h1>
-      <p>Precio: {{ descuento.porcentaje }}</p>
-      <p>Stock: {{ descuento.fechaInicio }}</p>
-      <p>Stock: {{ descuento.fechaFin }}</p>
-  </ul>
-  }
-</nav>
+<section class="descuentos-container">
+  <h1>Descuentos</h1>
 
+  <div class="descuentos-grid">
+
+    @for (descuento of descuentos; track descuento.id) {
+
+      <article class="descuento-card">
+
+        <header class="card-header">
+          <h2>{{ descuento.descripcion }}</h2>
+        </header>
+
+        <div class="card-body">
+          <div class="data-item">
+            <span class="data-label">Porcentaje:</span>
+            <span class="data-value">{{ descuento.porcentaje  }}</span>
+          </div>
+          <div class="data-item">
+            <span class="data-label">Fecha de Inicio:</span>
+            <span class="data-value">{{ descuento.fechaInicio }}</span>
+          </div>
+          <div class="data-item">
+            <span class="data-label">Fecha de Fin:</span>
+            <span class="data-value">{{ descuento.fechaFin  }}</span>
+          </div>
+        </div>
+
+      </article>
+
+    } @empty {
+      <p class="empty-state">No hay descuentos disponibles.</p>
+    }
+  </div>
+
+</section>
 

@@ -29,39 +29,52 @@
 
       <div class="formulario">
         <label for="precio">Precio</label>
-        <input type="text" id="id-precio" formControlName="precio">
+        <input type="number" id="id-precio" formControlName="precio">
         @if(precio?.invalid && (precio?.touched)){
         <p class="error-msg">El precio es obligatorio</p>
+        @if(precio?.hasError("min")){
+          <p class="error-msg">El precio no puede ser menor a 0</p>
+        }
         }
       </div>
 
       <div class="formulario">
         <label for="codigoBarras">Codigo de Barras</label>
-        <input type="text" id="id-codigoBarrras" formControlName="codigoBarras">
+        <input type="number" id="id-codigoBarrras" formControlName="codigoBarras">
 
       </div>
 
       <div class="formulario">
-        <label for="proveedorId">proveedor ID</label>
-        <input type="text" id="id-proveedorId" formControlName="proveedorId">
-        @if(proveedorId?.invalid && (proveedorId?.touched)){
-        <p class="error-msg">El proveedor ID es obligatorio</p>
-        }
+        <label for="proveedor">Proveedor</label>
+        <select  id="proveedorId" formControlName="proveedor">
+          <option [ngValue]=" null" disabled>Seleccionar proveedor</option>
+          @for(proveedor of proveedores();track proveedor.id){
+            <option [value]="proveedor.id">{{proveedor.nombre}}</option>
+          }@empty {
+            <option disabled>Cargando proveedores</option>
+          }
+        </select>
+      </div>
+
+      <div class="formulario">
+        <label for="descuento">Descuento</label>
+        <select  id="descuentoId" formControlName="descuento">
+          <option [ngValue]=" null" disabled>Seleccionar descuento</option>
+          @for(descuento of descuentos();track descuento.id){
+            <option [value]="descuento.id">{{descuento.descripcion}}</option>
+          }@empty {
+            <option disabled>Cargando descuentos</option>
+          }
+        </select>
 
       </div>
 
       <div class="formulario">
-
-        <label for="descuentoId">Descuento ID</label>
-        <input type="text" id="id-descuentoId" formControlName="descuentoId">
-        @if(descuentoId?.invalid && (descuentoId?.touched)){
-        <p class="error-msg">El descuento ID es obligatorio</p>
-        }
-
+        <label for="image">URL de Imagen</label>
+        <input type="text" id="image" formControlName="fotoUrl" placeholder="https://...">
       </div>
 
       <div class="form-actions">
-        <a routerLink="/events" class="boton-cancelo">Cancelar</a>
         <button type="submit" class="btn-primary" [disabled]="productForm.invalid">
           Guardar Producto
         </button>
