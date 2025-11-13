@@ -100,8 +100,23 @@
       "proveedorId": 2,
       "descuentoId": 2,
       "fotoUrl": "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3040004_f.jpg"
+    },
+    {
+      "id": "fc2b",
+      "nombre": "Pico dulce",
+      "descripcion": "Chupetin",
+      "categoria": "Dulce",
+      "precio": "15",
+      "codigoBarras": "55544667792"
+    },
+    {
+      "id": "9fa9",
+      "nombre": "dsasdads",
+      "descripcion": "dsaadsa",
+      "categoria": "esdsaad",
+      "precio": 34,
+      "codigoBarras": 432626262
     }
-
   ],
   "existencias": [
     {
