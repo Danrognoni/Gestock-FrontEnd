@@ -38,6 +38,34 @@
       "telefono": "2334424",
       "email": "dantema@gmail.com",
       "direccion": "asdasd"
+    },
+    {
+      "id": "3",
+      "nombre": "Panificadora La Espiga",
+      "telefono": "11223344",
+      "email": "pedidos@laespiga.com",
+      "direccion": "Av. Trigo 1234"
+    },
+    {
+      "id": "4",
+      "nombre": "Carnes del Sur",
+      "telefono": "55667788",
+      "email": "ventas@carnesdelsur.com",
+      "direccion": "Ruta 88 km 15"
+    },
+    {
+      "id": "5",
+      "nombre": "Verdulería El Huerto",
+      "telefono": "99887766",
+      "email": "elhuerto@gmail.com",
+      "direccion": "Calle Verde 789"
+    },
+    {
+      "id": "6",
+      "nombre": "Limpieza Total S.R.L",
+      "telefono": "44556677",
+      "email": "limpieza@total.com",
+      "direccion": "Parque Industrial 1"
     }
   ],
   "descuentos": [
@@ -54,6 +82,20 @@
       "porcentaje": 30.5,
       "fechaInicio": "2025-11-01",
       "fechaFin": "2025-11-15"
+    },
+    {
+      "id": "3",
+      "descripcion": "Cyber Monday",
+      "porcentaje": 25,
+      "fechaInicio": "2025-11-10",
+      "fechaFin": "2025-11-12"
+    },
+    {
+      "id": "4",
+      "descripcion": "Promo 2x1 (reflejar en precio)",
+      "porcentaje": 50,
+      "fechaInicio": "2025-11-15",
+      "fechaFin": "2025-11-20"
     }
   ],
   "productos": [
@@ -64,8 +106,8 @@
       "categoria": "Lácteos",
       "precio": 120.5,
       "codigoBarras": "7790010001234",
-      "proveedorId": 1,
-      "descuentoId": 1,
+      "proveedorId": "1",
+      "descuentoId": "1",
       "fotoUrl": "https://statics.dinoonline.com.ar/imagenes/large_460x460/3260728_l.jpg"
     },
     {
@@ -75,7 +117,7 @@
       "categoria": "Lácteos",
       "precio": 95.75,
       "codigoBarras": "7790010001235",
-      "proveedorId": 1,
+      "proveedorId": "1",
       "descuentoId": null,
       "fotoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfl5fOzsDGTZ1PHwTbEPeccaSmFWqPAYGCBw&s"
     },
@@ -86,9 +128,9 @@
       "categoria": "Bebidas",
       "precio": 210,
       "codigoBarras": "7790020003456",
-      "proveedorId": 2,
-      "descuentoId": 1,
-      "fotoUrl": "data:image/jpeg;base64,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"
+      "proveedorId": "2",
+      "descuentoId": "1",
+      "fotoUrl": "https://http2.mlstatic.com/D_NQ_NP_860436-MLA46377763616_062021-O.webp"
     },
     {
       "id": "4",
@@ -97,18 +139,151 @@
       "categoria": "Bebidas",
       "precio": 80.2,
       "codigoBarras": "7790020003457",
-      "proveedorId": 2,
-      "descuentoId": 2,
+      "proveedorId": "2",
+      "descuentoId": "2",
       "fotoUrl": "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3040004_f.jpg"
     },
-
     {
       "id": "5",
+      "nombre": "Pan Francés (kg)",
+      "descripcion": "Pan recién horneado",
+      "categoria": "Panadería",
+      "precio": 180,
+      "codigoBarras": "7790030001",
+      "proveedorId": "3",
+      "descuentoId": null,
+      "fotoUrl": "https://www.clarin.com/img/2022/07/20/m-sSjP-p0_1200x630__1.jpg"
+    },
+    {
+      "id": "6",
+      "nombre": "Medialunas de Manteca (doc)",
+      "descripcion": "Docena de medialunas de manteca",
+      "categoria": "Panadería",
+      "precio": 350,
+      "codigoBarras": "7790030002",
+      "proveedorId": "3",
+      "descuentoId": "3",
+      "fotoUrl": "https://assets.elgourmet.com/wp-content/uploads/2023/03/medialunas-de-manteca.jpg"
+    },
+    {
+      "id": "7",
+      "nombre": "Lomo (kg)",
+      "descripcion": "Lomo de novillo",
+      "categoria": "Carnicería",
+      "precio": 1200,
+      "codigoBarras": "7790040001",
+      "proveedorId": "4",
+      "descuentoId": null,
+      "fotoUrl": "https://cdn.shopify.com/s/files/1/0593/6316/0898/products/lomo_grande.jpg?v=1661376483"
+    },
+    {
+      "id": "8",
+      "nombre": "Pollo (kg)",
+      "descripcion": "Pollo entero fresco",
+      "categoria": "Carnicería",
+      "precio": 450,
+      "codigoBarras": "7790040002",
+      "proveedorId": "4",
+      "descuentoId": "1",
+      "fotoUrl": "https://static.paodeacucar.com/img/uploads/1/799/23696799.jpg"
+    },
+    {
+      "id": "9",
+      "nombre": "Manzana Roja (kg)",
+      "descripcion": "Manzana Red Delicious",
+      "categoria": "Verdulería",
+      "precio": 220,
+      "codigoBarras": "7790050001",
+      "proveedorId": "5",
+      "descuentoId": null,
+      "fotoUrl": "https://cdn.shopify.com/s/files/1/0257/0207/0333/products/Manzana_Rojakg_900x.jpg?v=1602787093"
+    },
+    {
+      "id": "10",
+      "nombre": "Lechuga Criolla (un)",
+      "descripcion": "Lechuga fresca",
+      "categoria": "Verdulería",
+      "precio": 90,
+      "codigoBarras": "7790050002",
+      "proveedorId": "5",
+      "descuentoId": null,
+      "fotoUrl": "https://jumboargentina.vtexassets.com/arquivos/ids/634407/Lechuga-Criolla-1-Un-403328.jpg?v=637466840742500000"
+    },
+    {
+      "id": "11",
+      "nombre": "Queso Cremoso (kg)",
+      "descripcion": "Queso cremoso La Paulina",
+      "categoria": "Lácteos",
+      "precio": 780,
+      "codigoBarras": "7790010001236",
+      "proveedorId": "1",
+      "descuentoId": "2",
+      "fotoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjF-2nS6Lw5-xZ-4bXlZ-1Y2M_zY-8s_4-w&s"
+    },
+    {
+      "id": "12",
+      "nombre": "Lavandina 1L",
+      "descripcion": "Lavandina Ayudín",
+      "categoria": "Limpieza",
+      "precio": 150,
+      "codigoBarras": "7790060001",
+      "proveedorId": "6",
+      "descuentoId": "4",
+      "fotoUrl": "https://www.distribuidorasuroficial.com.ar/storage/productos/392-1-382-1.jpg"
+    },
+    {
+      "id": "13",
+      "nombre": "Detergente 500ml",
+      "descripcion": "Detergente Magistral",
+      "categoria": "Limpieza",
+      "precio": 280,
+      "codigoBarras": "7790060002",
+      "proveedorId": "6",
+      "descuentoId": null,
+      "fotoUrl": "https://cugat.cl/wp-content/uploads/2023/12/28801.jpg"
+    },
+    {
+      "id": "14",
+      "nombre": "Cerveza Lager 1L",
+      "descripcion": "Cerveza rubia",
+      "categoria": "Bebidas",
+      "precio": 250,
+      "codigoBarras": "7790020003458",
+      "proveedorId": "2",
+      "descuentoId": "3",
+      "fotoUrl": "https://masonline.com.ar/wp-content/uploads/2021/07/bud-1l-ret.jpg"
+    },
+    {
+      "id": "15",
+      "nombre": "Jugo de Naranja 1L",
+      "descripcion": "Jugo exprimido",
+      "categoria": "Bebidas",
+      "precio": 310,
+      "codigoBarras": "7790020003459",
+      "proveedorId": "2",
+      "descuentoId": null,
+      "fotoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhY4M8T1-q-p0Q-3g_p_1-0QdM_z-8Y_4-w&s"
+    },
+    {
+      "id": "16",
+      "nombre": "Tomate (kg)",
+      "descripcion": "Tomate perita",
+      "categoria": "Verdulería",
+      "precio": 200,
+      "codigoBarras": "7790050003",
+      "proveedorId": "5",
+      "descuentoId": null,
+      "fotoUrl": "https://carrefourar.vtexassets.com/arquivos/ids/355152/7794860000109_E02.jpg?v=638422477545400000"
+    },
+    {
+      "id": "17",
       "nombre": "adsads",
       "descripcion": "dsaadsads",
       "categoria": "dsads",
       "precio": 2,
-      "codigoBarras": 54253252,
+      "codigoBarras": "54253252",
+      "proveedorId": "d5dc",
+      "descuentoId": null,
       "fotoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPv7oroVyMhxi6WYVmCbE1t8nuQM10-TwwMg&s"
     }
   ],
@@ -118,35 +293,133 @@
       "cantidad": 150,
       "fechaEntrada": "2025-10-20",
       "fechaVencimiento": "2025-11-10",
-      "productoId": 1
+      "productoId": "1"
     },
     {
       "id": "2",
       "cantidad": 200,
       "fechaEntrada": "2025-10-22",
       "fechaVencimiento": "2025-11-15",
-      "productoId": 2
+      "productoId": "2"
     },
     {
       "id": "3",
       "cantidad": 0,
       "fechaEntrada": "2025-10-15",
       "fechaVencimiento": "2026-01-20",
-      "productoId": 3
+      "productoId": "3"
     },
     {
       "id": "4",
       "cantidad": 300,
       "fechaEntrada": "2025-10-01",
       "fechaVencimiento": "2026-04-01",
-      "productoId": 4
+      "productoId": "4"
     },
     {
       "id": "5",
       "cantidad": 50,
       "fechaEntrada": "2025-10-28",
       "fechaVencimiento": "2025-11-05",
-      "productoId": 1
+      "productoId": "1"
+    },
+    {
+      "id": "6",
+      "cantidad": 100,
+      "fechaEntrada": "2025-11-01",
+      "fechaVencimiento": "2025-11-03",
+      "productoId": "5"
+    },
+    {
+      "id": "7",
+      "cantidad": 50,
+      "fechaEntrada": "2025-11-01",
+      "fechaVencimiento": "2025-11-04",
+      "productoId": "6"
+    },
+    {
+      "id": "8",
+      "cantidad": 80,
+      "fechaEntrada": "2025-10-30",
+      "fechaVencimiento": "2025-11-10",
+      "productoId": "7"
+    },
+    {
+      "id": "9",
+      "cantidad": 120,
+      "fechaEntrada": "2025-10-30",
+      "fechaVencimiento": "2025-11-08",
+      "productoId": "8"
+    },
+    {
+      "id": "10",
+      "cantidad": 200,
+      "fechaEntrada": "2025-10-29",
+      "fechaVencimiento": "2025-11-20",
+      "productoId": "9"
+    },
+    {
+      "id": "11",
+      "cantidad": 150,
+      "fechaEntrada": "2025-10-29",
+      "fechaVencimiento": "2025-11-10",
+      "productoId": "10"
+    },
+    {
+      "id": "12",
+      "cantidad": 70,
+      "fechaEntrada": "2025-10-25",
+      "fechaVencimiento": "2025-12-15",
+      "productoId": "11"
+    },
+    {
+      "id": "13",
+      "cantidad": 300,
+      "fechaEntrada": "2025-10-15",
+      "fechaVencimiento": "2026-10-15",
+      "productoId": "12"
+    },
+    {
+      "id": "14",
+      "cantidad": 250,
+      "fechaEntrada": "2025-10-15",
+      "fechaVencimiento": "2026-08-01",
+      "productoId": "13"
+    },
+    {
+      "id": "15",
+      "cantidad": 180,
+      "fechaEntrada": "2025-10-20",
+      "fechaVencimiento": "2026-05-01",
+      "productoId": "14"
+    },
+    {
+      "id": "16",
+      "cantidad": 100,
+      "fechaEntrada": "2025-10-20",
+      "fechaVencimiento": "2025-12-01",
+      "productoId": "15"
+    },
+    {
+      "id": "17",
+      "cantidad": 130,
+      "fechaEntrada": "2025-10-29",
+      "fechaVencimiento": "2025-11-12",
+      "productoId": "16"
+    },
+    {
+      "id": "18",
+      "cantidad": 100,
+      "fechaEntrada": "2025-11-02",
+      "fechaVencimiento": "2025-11-25",
+      "productoId": "2"
+    },
+    {
+      "id": "19",
+      "cantidad": 50,
+      "fechaEntrada": "2025-11-02",
+      "fechaVencimiento": "2026-02-01",
+      "productoId": "3"
     }
   ]
 }
