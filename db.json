@@ -23,14 +23,16 @@
       "nombre": "Proveedor Lácteos S.A.",
       "telefono": "123456789",
       "email": "contacto@lacteos.com",
-      "direccion": "Calle Falsa 123"
+      "direccion": "Calle Falsa 123",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Sancor_coop_logo.svg/320px-Sancor_coop_logo.svg.png"
     },
     {
       "id": "2",
       "nombre": "Distribuidora Bebidas SRL",
       "telefono": "987654321",
       "email": "ventas@bebidas.com",
-      "direccion": "Avenida Siempre Viva 742"
+      "direccion": "Avenida Siempre Viva 742",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/La_Serenisma_Logo.svg/1200px-La_Serenisma_Logo.svg.png"
     },
     {
       "id": "d5dc",

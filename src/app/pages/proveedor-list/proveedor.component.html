@@ -1,23 +1,8 @@
 <section>
-  @for (proveedor of proveedores(); track proveedor.id) {
-  <article>
-    <h2>Nombre: {{proveedor.nombre}}</h2>
-    <p>Teléfono: {{proveedor.telefono}}</p>
-    <p>Email: {{proveedor.email}}</p>
-    <p>Dirección: {{proveedor.direccion}}</p>
-    <button (click)="verDetalle(proveedor)">Ver detalles</button>
-  </article>
-  }
-  </section>
-
-  @if (proveedorSeleccionado) {
-    <h2>Detalles de {{proveedorSeleccionado.nombre}}</h2>
-  <article>
-    <button (click)="cerrarDetalle()">X</button>
-    <h2>{{proveedorSeleccionado.nombre}}</h2>
-    <h3>{{proveedorSeleccionado.telefono}}</h3>
-    <h3>{{proveedorSeleccionado.email}}</h3>
-    <h3>{{proveedorSeleccionado.direccion}}</h3>
-  </article>
-  }
-
+    @for (proveedor of proveedores(); track proveedor.id) {
+    <article (click)="proveedorDetail(proveedor.id)">
+      <img [src]="proveedor.imagen">
+      <h2>Nombre: {{proveedor.nombre}}</h2>
+    </article>
+    }
+</section>

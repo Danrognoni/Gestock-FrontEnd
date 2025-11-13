@@ -24,6 +24,23 @@ export class ProveedorFormComponent {
     })
   }
 
+  get nombre() {
+    return this.proveedorForm.get('nombre');
+  }
+
+   get telefono() {
+    return this.proveedorForm.get('telefono');
+  }
+
+
+   get email() {
+    return this.proveedorForm.get('email');
+  }
+
+   get direccion() {
+    return this.proveedorForm.get('direccion');
+  }
+
   onSubmit():void{
     this.proveedorForm.markAllAsTouched;
     if(this.proveedorForm.invalid)
