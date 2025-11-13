@@ -15,6 +15,7 @@ import { ProveedorNavComponent } from './components/proveedor-nav/proveedor-nav.
 import { DescuentoNavComponent } from './components/descuento-nav/descuento-nav.component';
 import { DescuentoFormComponent } from './pages/descuento-form/descuento-form.component';
 import { ProductoDetailComponent } from './pages/producto-detail/producto-detail.component';
+import { ExistenciaDetailComponent } from './pages/existencia-detail/existencia-detail.component';
 
 
 export const routes: Routes = [
@@ -47,7 +48,8 @@ export const routes: Routes = [
       },
       {
         path : 'createProveedor', component : ProveedorFormComponent
-      }
+      },
+
     ]
   },
 
@@ -58,6 +60,9 @@ export const routes: Routes = [
       },
       {
         path : 'createExistencia', component : ExistenciaFormComponent
+      },
+      {
+        path:'existenciaDetail/:id', component:ExistenciaDetailComponent
       }
     ]
   },
