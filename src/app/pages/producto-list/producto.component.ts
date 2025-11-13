@@ -26,15 +26,14 @@ export class ProductoComponent implements OnInit{
   }
 
  getProductos() {
-  console.log('Botón "Limpiar" clickeado. Pidiendo productos...'); 
 
   this.productoService.getProductos().subscribe({
     next: (data) => {
-      console.log('Datos recibidos:', data); 
+      console.log('Datos recibidos:', data);
       this.Productos = data;
     },
     error: (e) => {
-      console.error('ERROR al pedir productos:', e); 
+      console.error('ERROR al pedir productos:', e);
     }
   });
 }

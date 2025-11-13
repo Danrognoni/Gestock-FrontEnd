@@ -1,0 +1,105 @@
+/* --- Estilos Globales (Opcional) --- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f8f9fa; /* Un fondo gris muy claro */
+  color: #333;
+}
+
+/* --- Contenedor Principal --- */
+.existencia-container {
+  max-width: 1200px; /* Limita el ancho máximo */
+  margin: 20px auto;   /* Centra el contenedor */
+  padding: 0 20px;     /* Espacio en los costados */
+}
+
+.existencia-container h1 {
+  color: #222;
+  margin-bottom: 24px;
+}
+
+/* --- 1. El Contenedor del Grid --- */
+.existencias-grid {
+  display: grid; /* ¡La magia principal! */
+
+  /* Crea columnas automáticas:
+    - 'auto-fill': Llena el espacio con tantas columnas como sea posible.
+    - 'minmax(300px, 1fr)': Cada columna tendrá un mínimo de 300px
+      y un máximo de 1 fracción (se reparten el espacio sobrante).
+
+    ¡Esto hace que el grid sea responsive sin media queries!
+  */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+  gap: 24px; /* El espacio entre cada tarjeta */
+}
+
+/* --- 2. La Tarjeta Individual --- */
+.existencia-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px; /* Esquinas redondeadas */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+  overflow: hidden; /* Asegura que el header no se salga */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto al pasar el mouse */
+.existencia-card:hover {
+  transform: translateY(-4px); /* Eleva la tarjeta */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+}
+
+/* --- 3. Encabezado de la Tarjeta --- */
+.card-header {
+  background-color: #f9f9f9;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.card-header h3 {
+  margin: 0; /* Quita el margen por defecto del h3 */
+  color: #0056b3; /* Un color de acento para el ID */
+}
+
+/* --- 4. Cuerpo de la Tarjeta --- */
+.card-body {
+  padding: 20px;
+  display: flex; /* Usamos flex para ordenar los items */
+  flex-direction: column; /* Uno abajo del otro */
+  gap: 16px; /* Espacio entre cada línea de "data-item" */
+}
+
+/* --- 5. Cada Fila (Label + Valor) --- */
+.data-item {
+  display: flex; /* Usamos flex para el layout de la fila */
+  justify-content: space-between; /* Empuja el label a la izq. y valor a la der. */
+  align-items: center;
+  gap: 10px;
+}
+
+.data-label {
+  font-weight: 600; /* Negrita para el label */
+  color: #555;
+  font-size: 0.95em;
+}
+
+.data-value {
+  font-weight: 500;
+  color: #111;
+  /* Opcional: para fechas largas que no entran */
+  /* white-space: nowrap; */
+  /* text-overflow: ellipsis; */
+  /* overflow: hidden; */
+}
+
+/* --- Estado Vacío (si no hay existencias) --- */
+.empty-state {
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+  color: #777;
+  font-style: italic;
+  background-color: #fff;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+}
