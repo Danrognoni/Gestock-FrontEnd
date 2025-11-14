@@ -1,9 +1,21 @@
-@if(proveedor(); as proveedor){
-  <div class="detalle-proveedor">
-    <button class="btn-cerrar" (click)="volver()">Volver</button>
-    <h1>Nombre : {{ proveedor.nombre }}</h1>
-    <p>Teléfono: {{ proveedor.telefono }}</p>
-    <p>Email: {{ proveedor.email }}</p>
-    <p>Dirección: {{ proveedor.direccion }}</p>
-  </div>
-}
+<section class="container-detalle">
+  @if(proveedor(); as proveedor){
+    <div class="detalle-proveedor-card">
+      <button class="btn-volver" (click)="volver()">Volver</button>
+      <div class="detalle-content">
+        <div class="imagen-container">
+          <img [src]="proveedor.imagen" alt="Imagen de {{proveedor.nombre}}">
+        </div>
+
+        <div class="info-container">
+          <h1>{{ proveedor.nombre }}</h1>
+
+          <p><strong>Teléfono:</strong> {{ proveedor.telefono }}</p>
+          <p><strong>Email:</strong> {{ proveedor.email }}</p>
+          <p><strong>Dirección:</strong> {{ proveedor.direccion }}</p>
+        </div>
+      </div>
+    </div>
+  }
+</section>
+
