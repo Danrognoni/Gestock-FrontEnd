@@ -1,7 +1,89 @@
-fieldset {
-  display: flex;
-  flex-direction: column;
+.form-container {
+  background-color: #b0a8f7;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-fieldset input {
-  margin: 0.5rem;
+
+.form-title {
+  text-align: center;
+  color: black;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.form-card {
+  display: block;
+  background-color: #ffffff;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.formulario {
+  margin-bottom: 1.5rem;
+}
+
+.formulario label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.formulario input[type="text"],
+.formulario input[type="number"],
+.formulario input[type="email"],
+.formulario select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+.msg-error {
+  color: #d9534f;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+}
+
+button[type="submit"] {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  color: #555;
+  padding: 0.3rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0.2rem;
+}
+
+button[type="submit"]:disabled {
+  background-color: #f0f0f0;
+  border-color: #ddd;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+button[type="submit"]:not(:disabled):hover {
+  background-color: #e0e0e0;
+}
+
+.form-card fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
 }

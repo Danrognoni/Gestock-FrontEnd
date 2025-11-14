@@ -1,7 +1,7 @@
-<section>
-  <form [formGroup]="proveedorForm" (ngSubmit)="onSubmit()">
+<section class="form-container">
+  <h1 class="form-title">Agregar nuevo proveedor</h1>
+  <form class="form-card" [formGroup]="proveedorForm" (ngSubmit)="onSubmit()">
     <fieldset>
-      <legend>Agregar un nuevo proveedor</legend>
       <div class="formulario">
         <label for="nombre">Nombre
         <input type="text" id="nombre" formControlName="nombre">

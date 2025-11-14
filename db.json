@@ -28,18 +28,11 @@
     },
     {
       "id": "2",
-      "nombre": "Distribuidora Bebidas SRL",
+      "nombre": "La Serenisima",
       "telefono": "987654321",
       "email": "ventas@bebidas.com",
       "direccion": "Avenida Siempre Viva 742",
       "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/La_Serenisma_Logo.svg/1200px-La_Serenisma_Logo.svg.png"
-    },
-    {
-      "id": "d5dc",
-      "nombre": "Dante",
-      "telefono": "2334424",
-      "email": "dantema@gmail.com",
-      "direccion": "asdasd"
     },
     {
       "id": "3",
