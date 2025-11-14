@@ -1,0 +1,134 @@
+.container-detalle {
+  background-color: #9b95f5;
+  min-height: 100vh;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.detalle-proveedor-card {
+  background-color: #2a2f4c;
+  color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 950px;
+  margin-bottom: 5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+.btn-volver {
+  background-color: #4a5568;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+.btn-volver:hover {
+  background-color: #5a6578;
+}
+
+.detalle-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.imagen-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 350px;
+}
+
+.imagen-container img {
+  width: 100%;
+  height: 100%;
+  max-height: 330px;
+  object-fit: contain;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-container h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.info-container p {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.info-container p strong {
+  color: #e5e7eb;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.separador {
+  border: 0;
+  height: 1px;
+  background-color: #4a5568;
+  margin: 1.5rem 0;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tag-proveedor {
+  background-color: #374151;
+  color: #e5e7eb;
+  padding: 0.3rem 0.8rem;
+  border-radius: 99px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .container-detalle {
+    padding: 2rem;
+    align-items: center;
+  }
+
+  .detalle-proveedor-card {
+    padding: 2.5rem;
+  }
+
+  .detalle-content {
+    grid-template-columns: 300px 1fr;
+    gap: 2.5rem;
+  }
+
+  .imagen-container {
+     max-height: none;
+  }
+
+  .info-container h1 {
+    font-size: 2.8rem;
+  }
+}
