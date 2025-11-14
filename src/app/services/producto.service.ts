@@ -26,8 +26,11 @@ export class ProductoService {
   }
 
   getProductoById(id : number){
-    const url = `${this.apiurl}/${id}`; 
+    const url = `${this.apiurl}/${id}`;
     return this.http.get<any>(url);
   }
 
+  deleteProducto(id:number){
+    return this.http.delete(this.apiurl);
+  }
 }
