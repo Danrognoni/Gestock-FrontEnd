@@ -28,6 +28,7 @@ export class ExistenciaService {
   }
 
   deleteExistencia(id:number){
-    return this.http.delete(this.apiUrl);
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.delete(url);
   }
 }

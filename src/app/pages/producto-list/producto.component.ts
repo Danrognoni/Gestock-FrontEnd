@@ -55,6 +55,7 @@ export class ProductoComponent implements OnInit {
       this.productoService.deleteProducto(id).subscribe({
         next: () => {
           alert("Producto eliminado con exito");
+          this.Productos = this.Productos.filter(p => p.id !== id);
         },
         error: () => {
           alert("Error fatal");

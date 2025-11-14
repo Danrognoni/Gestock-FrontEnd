@@ -38,6 +38,7 @@ export class DescuentoComponent implements OnInit {
       this.descuentoService.deleteDescuento(id).subscribe({
         next: ()=> {
           alert("Descuento eliminado con exito");
+          this.descuentos = this.descuentos.filter(d => d.id !== id);
         },
         error:()=> {
           alert("Error fatal");

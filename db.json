@@ -54,13 +54,6 @@
       "telefono": "99887766",
       "email": "elhuerto@gmail.com",
       "direccion": "Calle Verde 789"
-    },
-    {
-      "id": "6",
-      "nombre": "Limpieza Total S.R.L",
-      "telefono": "44556677",
-      "email": "limpieza@total.com",
-      "direccion": "Parque Industrial 1"
     }
   ],
   "descuentos": [
@@ -247,39 +240,6 @@
       "proveedorId": "2",
       "descuentoId": "3",
       "fotoUrl": "https://masonline.com.ar/wp-content/uploads/2021/07/bud-1l-ret.jpg"
-    },
-    {
-      "id": "15",
-      "nombre": "Jugo de Naranja 1L",
-      "descripcion": "Jugo exprimido",
-      "categoria": "Bebidas",
-      "precio": 310,
-      "codigoBarras": "7790020003459",
-      "proveedorId": "2",
-      "descuentoId": null,
-      "fotoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhY4M8T1-q-p0Q-3g_p_1-0QdM_z-8Y_4-w&s"
-    },
-    {
-      "id": "16",
-      "nombre": "Tomate (kg)",
-      "descripcion": "Tomate perita",
-      "categoria": "Verdulería",
-      "precio": 200,
-      "codigoBarras": "7790050003",
-      "proveedorId": "5",
-      "descuentoId": null,
-      "fotoUrl": "https://carrefourar.vtexassets.com/arquivos/ids/355152/7794860000109_E02.jpg?v=638422477545400000"
-    },
-    {
-      "id": "17",
-      "nombre": "adsads",
-      "descripcion": "dsaadsads",
-      "categoria": "dsads",
-      "precio": 2,
-      "codigoBarras": "54253252",
-      "proveedorId": "d5dc",
-      "descuentoId": null,
-      "fotoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPv7oroVyMhxi6WYVmCbE1t8nuQM10-TwwMg&s"
     }
   ],
   "existencias": [
@@ -393,14 +353,14 @@
       "cantidad": 100,
       "fechaEntrada": "2025-10-20",
       "fechaVencimiento": "2025-12-01",
-      "productoId": "15"
+      "productoId": null
     },
     {
       "id": "17",
       "cantidad": 130,
       "fechaEntrada": "2025-10-29",
       "fechaVencimiento": "2025-11-12",
-      "productoId": "16"
+      "productoId": null
     },
     {
       "id": "18",

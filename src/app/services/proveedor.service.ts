@@ -25,6 +25,7 @@ export class ProveedorService {
   }
 
   deleteProveedor(id:number){
-    return this.httpClient.delete(this.apiUrl);
+    const url = `${this.apiUrl}/${id}`;
+    return this.httpClient.delete(url);
   }
 }

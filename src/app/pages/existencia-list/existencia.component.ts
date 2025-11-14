@@ -63,6 +63,7 @@ export class ExistenciaComponent implements OnInit{
       this.existenciaService.deleteExistencia(id).subscribe({
         next: () => {
           alert("Existencia eliminada con exito");
+          this.existencias = this.existencias.filter(e => e.id !== id);
         }
         ,
         error: () => {

@@ -25,6 +25,7 @@ export class DescuentoService {
   }
 
   deleteDescuento(id:number){
-    return this.http.delete(this.apiURL);
+    const url = `${this.apiURL}/${id}`;
+    return this.http.delete(url);
   }
 }

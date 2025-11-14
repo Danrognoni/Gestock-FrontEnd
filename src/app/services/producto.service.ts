@@ -31,6 +31,7 @@ export class ProductoService {
   }
 
   deleteProducto(id:number){
-    return this.http.delete(this.apiurl);
+    const url = `${this.apiurl}/${id}`;
+    return this.http.delete(url);
   }
 }
