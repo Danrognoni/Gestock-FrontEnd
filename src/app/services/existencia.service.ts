@@ -23,7 +23,11 @@ export class ExistenciaService {
   }
 
   getExistenciaById(id : number){
-    const url = `${this.apiUrl}/${id}`; 
+    const url = `${this.apiUrl}/${id}`;
     return this.http.get<any>(url);
+  }
+
+  deleteExistencia(id:number){
+    return this.http.delete(this.apiUrl);
   }
 }
