@@ -34,10 +34,10 @@ export class DescuentoComponent implements OnInit {
    )
   }
   deleteDescuento(id:number){
-    if(confirm("Estás seguro de que desea eliminar este producto?")){
+    if(confirm("Estás seguro de que desea eliminar este descuento?")){
       this.descuentoService.deleteDescuento(id).subscribe({
         next: ()=> {
-          alert("Producto eliminado con exito");
+          alert("Descuento eliminado con exito");
         },
         error:()=> {
           alert("Error fatal");

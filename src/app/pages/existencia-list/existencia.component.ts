@@ -58,5 +58,18 @@ export class ExistenciaComponent implements OnInit{
     }
   });
 }
+  deleteExistencia(id:number){
+    if(confirm("Estás seguro de que desea eliminar esta existencia?")){
+      this.existenciaService.deleteExistencia(id).subscribe({
+        next: () => {
+          alert("Existencia eliminada con exito");
+        }
+        ,
+        error: () => {
+          alert("Error fatal");
+        }
+      })
+    }
+  }
 
 }

@@ -31,7 +31,7 @@
             <span class="data-value">{{ existencia.fechaVencimiento }}</span>
           </div>
         </div>
-
+        <button (click)="deleteExistencia(existencia.id)">Eliminar</button>
       </article>
     } @empty {
       <p class="empty-state">No se encontraron existencias.</p>
