@@ -1,15 +1,75 @@
-
-section{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.container {
+  background-color: #9b95f5;
+  min-height: 100vh;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 h2 {
   text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 570;
 }
-article {
-  margin: 1rem;
+
+.proveedor-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.proveedor-card {
+  background-color: #1f1f1f;
+  border-radius: 12px;
   padding: 1rem;
-  background: #a05d4a;
-  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  min-height: 450px;
+}
+
+.proveedor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.proveedor-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: contain;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid #e0e0e0;
+}
+
+.proveedor-card h2 {
+  background-color: #6c5ce7;
+  color: white;
+  font-size: 1.5rem;
   text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .page-wrapper {
+    padding: 2rem;
+  }
+
+  .proveedor-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
