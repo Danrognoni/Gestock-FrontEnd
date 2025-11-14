@@ -20,7 +20,11 @@ export class DescuentoService {
   }
 
   getDescuentoById(id : number){
-    const url = `${this.apiURL}/${id}`; 
+    const url = `${this.apiURL}/${id}`;
     return this.http.get<any>(url);
+  }
+
+  deleteDescuento(id:number){
+    return this.http.delete(this.apiURL);
   }
 }
