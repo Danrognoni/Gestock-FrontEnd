@@ -1,8 +1,11 @@
-<section>
+<div class="container">
+  <h2>Proveedores</h2>
+  <section class="proveedor-container">
     @for (proveedor of proveedores(); track proveedor.id) {
-    <article (click)="proveedorDetail(proveedor.id)">
-      <img [src]="proveedor.imagen">
-      <h2>Nombre: {{proveedor.nombre}}</h2>
-    </article>
+      <article class="proveedor-card" (click)="proveedorDetail(proveedor.id)">
+        <img [src]="proveedor.imagen" alt="Imagen de {{proveedor.nombre}}">
+        <h2>{{proveedor.nombre}}</h2>
+      </article>
     }
-</section>
+  </section>
+</div>
