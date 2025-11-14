@@ -22,4 +22,17 @@ export class ProveedorComponent {
     this.router.navigate(['proveedores/proveedorDetail/', id]);
 
   }
+
+  deleteProveedor(id:number){
+    if(confirm("Estás seguro de que deseas eliminar este proveedor?")){
+      this.proveedorService.deleteProveedor(id).subscribe({
+        next: () =>{
+          alert("Proveedor eliminado con exito");
+        },
+        error: ()=>{
+          alert("Error fatal");
+        }
+      })
+    }
+  }
 }

@@ -5,6 +5,7 @@
       <article class="proveedor-card" (click)="proveedorDetail(proveedor.id)">
         <img [src]="proveedor.imagen" alt="Imagen de {{proveedor.nombre}}">
         <h2>{{proveedor.nombre}}</h2>
+        <button (click)="deleteProveedor(proveedor.id)">Eliminar</button>
       </article>
     }
   </section>
