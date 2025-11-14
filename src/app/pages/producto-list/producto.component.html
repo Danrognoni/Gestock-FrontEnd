@@ -7,6 +7,7 @@
   <li class="lista-productos">
     <img class="img-producto" [src]="producto.fotoUrl" [alt]="producto.nombre">
     <button class="button" (click)="verDetalle(producto.id)">{{ producto.nombre }}</button>
+    <button (click)="deleteProducto(producto.id)">Eliminar</button>
   </li>
   }
 </ul>

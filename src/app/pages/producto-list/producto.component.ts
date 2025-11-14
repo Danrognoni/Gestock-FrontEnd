@@ -10,9 +10,9 @@ import { Router } from '@angular/router';
   imports: [CommonModule],
   templateUrl: './producto.component.html',
   styleUrl: './producto.component.css',
-  standalone:true
+  standalone: true
 })
-export class ProductoComponent implements OnInit{
+export class ProductoComponent implements OnInit {
 
   Productos: any[] = [];
 
@@ -22,32 +22,46 @@ export class ProductoComponent implements OnInit{
   private route = inject(Router);
 
   ngOnInit(): void {
-   this.getProductos()
+    this.getProductos()
   }
 
- getProductos() {
+  getProductos() {
 
-  this.productoService.getProductos().subscribe({
-    next: (data) => {
-      console.log('Datos recibidos:', data);
-      this.Productos = data;
-    },
-    error: (e) => {
-      console.error('ERROR al pedir productos:', e);
-    }
-  });
-}
+    this.productoService.getProductos().subscribe({
+      next: (data) => {
+        console.log('Datos recibidos:', data);
+        this.Productos = data;
+      },
+      error: (e) => {
+        console.error('ERROR al pedir productos:', e);
+      }
+    });
+  }
 
- verDetalle(id : number){
+  verDetalle(id: number) {
     this.route.navigate(['/productos/productoDetail', id]);
   }
 
 
 
-  cerrarDetalle(){
+  cerrarDetalle() {
     this.productoSeleccionado = null;
   }
 
+  deleteProducto(id: number) {
+    if (confirm("Estás seguro de que deseas eliminar este producto")) {
+
+
+      this.productoService.deleteProducto(id).subscribe({
+        next: () => {
+          alert("Producto eliminado con exito");
+        },
+        error: () => {
+          alert("Error fatal");
+        }
+      });
+    }
+  }
 
 
 
