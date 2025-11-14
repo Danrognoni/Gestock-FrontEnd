@@ -17,11 +17,6 @@ import { DescuentoFormComponent } from './pages/descuento-form/descuento-form.co
 import { ProductoDetailComponent } from './pages/producto-detail/producto-detail.component';
 import { ExistenciaDetailComponent } from './pages/existencia-detail/existencia-detail.component';
 import { ProveedorDetailComponent } from './pages/proveedor-detail/proveedor-detail.component';
-import { ProductoDeleteComponent } from './pages/producto-delete/producto-delete.component';
-import { ProveedorDeleteComponent } from './pages/proveedor-delete/proveedor-delete.component';
-import { ExistenciaDeleteComponent } from './pages/existencia-delete/existencia-delete.component';
-import { DescuentoDeleteComponent } from './pages/descuento-delete/descuento-delete.component';
-
 
 export const routes: Routes = [
 
@@ -42,9 +37,6 @@ export const routes: Routes = [
       },
       {
         path : 'productoDetail/:id', component:ProductoDetailComponent
-      },
-      {
-        path : "deleteProducto", component:ProductoDeleteComponent
       }
     ]
   },
@@ -59,9 +51,6 @@ export const routes: Routes = [
       },
       {
         path : 'proveedorDetail/:id', component : ProveedorDetailComponent
-      },
-      {
-        path : "proveedorDelete", component:ProveedorDeleteComponent
       }
     ]
   },
@@ -76,9 +65,6 @@ export const routes: Routes = [
       },
       {
         path:'existenciaDetail/:id', component:ExistenciaDetailComponent
-      },
-      {
-        path:"existenciaDelete", component:ExistenciaDeleteComponent
       }
     ]
   },
@@ -89,9 +75,6 @@ export const routes: Routes = [
       },
       {
         path : 'createDescuento', component:DescuentoFormComponent
-      },
-      {
-        path: "deleteDescuento", component:DescuentoDeleteComponent
       }
     ]
    }
