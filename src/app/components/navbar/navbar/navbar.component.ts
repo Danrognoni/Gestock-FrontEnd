@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { RouterLink } from "@angular/router";
+import { Router, RouterLink } from "@angular/router";
 import { AuthService } from '../../../services/auth.service';
 
 @Component({
@@ -12,9 +12,19 @@ import { AuthService } from '../../../services/auth.service';
 })
 export class NavbarComponent {
 
- constructor(public authService: AuthService){}
+private router = inject(Router);
 
-  logout() {
-    this.authService.logout();
+
+public authService = inject(AuthService);
+
+
+  handleAuthAction() {
+    if (this.authService.estoyLogeado()) {
+
+      this.authService.logOut();
+    } else {
+
+      this.router.navigateByUrl('/login');
+    }
   }
 }

@@ -1,24 +1,22 @@
-
-<div style="background-color: #f0f0f0; padding: 10px; margin-top: 15px; border: 1px solid #ccc;">
-  <h3>Panel de Prueba (Temporal)</h3>
-  <button (click)="authService.loginComoAdmin()">Simular Login ADMIN</button>
-  <button (click)="authService.loginComoEmpleado()">Simular Login EMPLEADO</button>
-</div>
-
 <nav>
-  <h1>Gestock</h1>
-  <ul>
-    @if (authService.isLoggedIn()) {
-      <li><a routerLink="">Inicio</a></li>
-      <li><a routerLink="productos">Productos</a></li>
-      <li><a routerLink="existencia">Existencias</a></li>
+  <a routerLink="/home">Home</a>
+
+  @if (authService.currentUser()?.rol === 'ADMINISTRADOR') {
+    <a routerLink="/productos">Gestión de Productos</a>
+    <a routerLink="/proveedores">Gestión de Proveedores</a>
+    <a routerLink="/descuento">Descuentos</a>
+  }
+  @if (authService.currentUser()?.rol === 'EMPLEADO') {
+    <a routerLink="/existencia">Ver Existencias</a>
+     <a routerLink="/productos">Gestión de Productos</a>
+
+  }
+
+  <button (click)="handleAuthAction()">
+    @if (authService.estoyLogeado()) {
+      Cerrar Sesión ({{ authService.currentUser()?.username }})
+    } @else {
+      Iniciar Sesión
     }
-    @if (authService.isAdmin()) {
-      <li><a routerLink="proveedores">Proveedores</a></li>
-      <li><a routerLink="descuento">Descuentos</a></li>
-    }
-    @if (authService.isLoggedIn()) {
-      <li><a (click)="logout()" style="cursor: pointer;">Cerrar Sesión</a></li>
-    }
-  </ul>
+  </button>
 </nav>

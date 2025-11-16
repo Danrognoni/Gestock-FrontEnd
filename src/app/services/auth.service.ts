@@ -1,6 +1,7 @@
 import { HttpClient, HttpContext } from '@angular/common/http';
 import { inject, Injectable, signal } from '@angular/core';
 import { Router } from '@angular/router';
+import { Usuario } from '../model/usuario';
 
 // Definimos un tipo simple para el rol
 export type UserRole = 'ADMINISTRADOR' | 'EMPLEADO' | null;
@@ -16,6 +17,7 @@ export class AuthService {
   private route = inject(Router);
   public estoyLogeado = signal(false);
   private http = inject(HttpClient);
+  public currentUser = signal<Usuario | null>(null);
 
   constructor(){
     this.getUsersRegistered().subscribe({
@@ -27,8 +29,12 @@ export class AuthService {
 
       }
     })
-    const user = localStorage.getItem('loggerUser');
+    const user = localStorage.getItem('loggedUser');
     if(user){
+
+
+      const userObj = JSON.parse(user);
+      this.currentUser.set(userObj);
       this.estoyLogeado.set(true);
     }
   }
@@ -37,23 +43,38 @@ export class AuthService {
     return this.http.get<any[]>(this.apiUrl);
   }
 
-  checkUserExists(userLog : any): boolean{
-    const users = this.userRegisteredSignal();
-    return users.some(user=>
-      user.username.toLowerCase() === userLog.username.toLowerCase() &&
-      user.password === userLog.password
-    );
+ validateCredentials(userLog: any): Promise<Usuario | null> {
+    return new Promise((resolve) => {
+      this.http.get<any[]>(this.apiUrl).subscribe(users => {
+        const foundUser = users.find(user =>
+          user.username.toLowerCase() === userLog.username.toLowerCase() &&
+          user.password === userLog.password
+        );
+
+        if (foundUser) {
+
+          const { password, ...userToSave } = foundUser;
+          resolve(userToSave as Usuario);
+        } else {
+          resolve(null);
+        }
+      });
+    });
   }
 
-  logIn(){
+
+  logIn(user: Usuario) {
+    this.currentUser.set(user);
     this.estoyLogeado.set(true);
+    localStorage.setItem('loggedUser', JSON.stringify(user));
   }
 
-  logOut(){
-    this.route.navigateByUrl('Acces-denied');
+ logOut() {
+  console.log('¡¡¡INTENTANDO CERRAR SESIÓN!!!');
+    this.currentUser.set(null);
     this.estoyLogeado.set(false);
-    if(localStorage.getItem('loggedUser')){
-      localStorage.removeItem('loggedUser')
-    }
+    localStorage.removeItem('loggedUser');
+    this.route.navigateByUrl('/home');
   }
 }
+

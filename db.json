@@ -143,17 +143,6 @@
       "fotoUrl": "https://www.clarin.com/img/2022/07/20/m-sSjP-p0_1200x630__1.jpg"
     },
     {
-      "id": "6",
-      "nombre": "Medialunas de Manteca (doc)",
-      "descripcion": "Docena de medialunas de manteca",
-      "categoria": "Panadería",
-      "precio": 350,
-      "codigoBarras": "7790030002",
-      "proveedorId": "3",
-      "descuentoId": "3",
-      "fotoUrl": "https://assets.elgourmet.com/wp-content/uploads/2023/03/medialunas-de-manteca.jpg"
-    },
-    {
       "id": "7",
       "nombre": "Lomo (kg)",
       "descripcion": "Lomo de novillo",
@@ -290,7 +279,7 @@
       "cantidad": 50,
       "fechaEntrada": "2025-11-01",
       "fechaVencimiento": "2025-11-04",
-      "productoId": "6"
+      "productoId": null
     },
     {
       "id": "8",
