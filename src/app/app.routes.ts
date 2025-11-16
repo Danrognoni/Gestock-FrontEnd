@@ -21,6 +21,7 @@ import { ProveedorDetailComponent } from './pages/proveedor-detail/proveedor-det
 export const routes: Routes = [
 
   { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
 
 
   {

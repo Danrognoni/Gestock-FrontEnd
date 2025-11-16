@@ -1,4 +1,6 @@
-import { Injectable, signal } from '@angular/core';
+import { HttpClient, HttpContext } from '@angular/common/http';
+import { inject, Injectable, signal } from '@angular/core';
+import { Router } from '@angular/router';
 
 // Definimos un tipo simple para el rol
 export type UserRole = 'ADMINISTRADOR' | 'EMPLEADO' | null;
@@ -8,39 +10,50 @@ export type UserRole = 'ADMINISTRADOR' | 'EMPLEADO' | null;
 })
 export class AuthService {
 
+  private apiUrl = 'http://localhost:3000/usuarios';
+  private userRegisteredSignal = signal<any[]>([]);
+  public userRegistered = this.userRegisteredSignal.asReadonly();
+  private route = inject(Router);
+  public estoyLogeado = signal(false);
+  private http = inject(HttpClient);
 
-  public currentUserRole = signal<UserRole>(null);
+  constructor(){
+    this.getUsersRegistered().subscribe({
+      next : (data)=>{
+        this.userRegisteredSignal.set(data);
+      },
+      error : (e)=>{
+        console.error(e);
 
-  constructor() { }
-
-
-
-  loginComoAdmin(): void {
-    this.currentUserRole.set('ADMINISTRADOR');
-    console.log('Logueado como ADMIN');
+      }
+    })
+    const user = localStorage.getItem('loggerUser');
+    if(user){
+      this.estoyLogeado.set(true);
+    }
   }
 
-  loginComoEmpleado(): void {
-
-    this.currentUserRole.set('EMPLEADO');
-    console.log('Logueado como EMPLEADO');
+  getUsersRegistered(){
+    return this.http.get<any[]>(this.apiUrl);
   }
 
-  logout(): void {
-    this.currentUserRole.set(null);
-    console.log('Logout');
+  checkUserExists(userLog : any): boolean{
+    const users = this.userRegisteredSignal();
+    return users.some(user=>
+      user.username.toLowerCase() === userLog.username.toLowerCase() &&
+      user.password === userLog.password
+    );
   }
 
-
-  public isAdmin(): boolean {
-    return this.currentUserRole() === 'ADMINISTRADOR';
+  logIn(){
+    this.estoyLogeado.set(true);
   }
 
-  public isEmpleado(): boolean {
-    return this.currentUserRole() === 'EMPLEADO';
-  }
-
-  public isLoggedIn(): boolean {
-    return this.currentUserRole() !== null;
+  logOut(){
+    this.route.navigateByUrl('Acces-denied');
+    this.estoyLogeado.set(false);
+    if(localStorage.getItem('loggedUser')){
+      localStorage.removeItem('loggedUser')
+    }
   }
 }
