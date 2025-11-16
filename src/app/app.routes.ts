@@ -22,6 +22,11 @@ export const routes: Routes = [
 
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
+  {path : 'login', component:},
+  {
+    path : 'Acces-denied', component
+  }
+
 
 
   {
