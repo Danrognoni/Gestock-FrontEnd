@@ -31,4 +31,9 @@ export class ExistenciaService {
     const url = `${this.apiUrl}/${id}`;
     return this.http.delete(url);
   }
+
+  updateExistencia(id:number|null, data : Existencia): Observable<Existencia>{
+      const url = `${this.apiUrl}/${id}`;
+      return this.http.put<Existencia>(url, data);
+    }
 }
