@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Producto } from '../model/producto';
@@ -34,4 +35,10 @@ export class ProductoService {
     const url = `${this.apiurl}/${id}`;
     return this.http.delete(url);
   }
+
+   updateProducto(id:number, data : Producto): Observable<Producto>{
+    const url = `${this.apiurl}/${id}`;
+    return this.http.put<Producto>(url, data);
+  }
+
 }
