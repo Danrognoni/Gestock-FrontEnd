@@ -110,17 +110,6 @@
       "fotoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfl5fOzsDGTZ1PHwTbEPeccaSmFWqPAYGCBw&s"
     },
     {
-      "id": "3",
-      "nombre": "Gaseosa Cola 2.25L",
-      "descripcion": "Bebida sin alcohol gasificada",
-      "categoria": "Bebidas",
-      "precio": 210,
-      "codigoBarras": "7790020003456",
-      "proveedorId": "2",
-      "descuentoId": "1",
-      "fotoUrl": "https://http2.mlstatic.com/D_NQ_NP_860436-MLA46377763616_062021-O.webp"
-    },
-    {
       "id": "4",
       "nombre": "Agua Mineral 1.5L",
       "descripcion": "Agua mineral sin gas",
@@ -130,105 +119,6 @@
       "proveedorId": "2",
       "descuentoId": "2",
       "fotoUrl": "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3040004_f.jpg"
-    },
-    {
-      "id": "5",
-      "nombre": "Pan Francés (kg)",
-      "descripcion": "Pan recién horneado",
-      "categoria": "Panadería",
-      "precio": 180,
-      "codigoBarras": "7790030001",
-      "proveedorId": "3",
-      "descuentoId": null,
-      "fotoUrl": "https://www.clarin.com/img/2022/07/20/m-sSjP-p0_1200x630__1.jpg"
-    },
-    {
-      "id": "7",
-      "nombre": "Lomo (kg)",
-      "descripcion": "Lomo de novillo",
-      "categoria": "Carnicería",
-      "precio": 1200,
-      "codigoBarras": "7790040001",
-      "proveedorId": "4",
-      "descuentoId": null,
-      "fotoUrl": "https://cdn.shopify.com/s/files/1/0593/6316/0898/products/lomo_grande.jpg?v=1661376483"
-    },
-    {
-      "id": "8",
-      "nombre": "Pollo (kg)",
-      "descripcion": "Pollo entero fresco",
-      "categoria": "Carnicería",
-      "precio": 450,
-      "codigoBarras": "7790040002",
-      "proveedorId": "4",
-      "descuentoId": "1",
-      "fotoUrl": "https://static.paodeacucar.com/img/uploads/1/799/23696799.jpg"
-    },
-    {
-      "id": "9",
-      "nombre": "Manzana Roja (kg)",
-      "descripcion": "Manzana Red Delicious",
-      "categoria": "Verdulería",
-      "precio": 220,
-      "codigoBarras": "7790050001",
-      "proveedorId": "5",
-      "descuentoId": null,
-      "fotoUrl": "https://cdn.shopify.com/s/files/1/0257/0207/0333/products/Manzana_Rojakg_900x.jpg?v=1602787093"
-    },
-    {
-      "id": "10",
-      "nombre": "Lechuga Criolla (un)",
-      "descripcion": "Lechuga fresca",
-      "categoria": "Verdulería",
-      "precio": 90,
-      "codigoBarras": "7790050002",
-      "proveedorId": "5",
-      "descuentoId": null,
-      "fotoUrl": "https://jumboargentina.vtexassets.com/arquivos/ids/634407/Lechuga-Criolla-1-Un-403328.jpg?v=637466840742500000"
-    },
-    {
-      "id": "11",
-      "nombre": "Queso Cremoso (kg)",
-      "descripcion": "Queso cremoso La Paulina",
-      "categoria": "Lácteos",
-      "precio": 780,
-      "codigoBarras": "7790010001236",
-      "proveedorId": "1",
-      "descuentoId": "2",
-      "fotoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjF-2nS6Lw5-xZ-4bXlZ-1Y2M_zY-8s_4-w&s"
-    },
-    {
-      "id": "12",
-      "nombre": "Lavandina 1L",
-      "descripcion": "Lavandina Ayudín",
-      "categoria": "Limpieza",
-      "precio": 150,
-      "codigoBarras": "7790060001",
-      "proveedorId": "6",
-      "descuentoId": "4",
-      "fotoUrl": "https://www.distribuidorasuroficial.com.ar/storage/productos/392-1-382-1.jpg"
-    },
-    {
-      "id": "13",
-      "nombre": "Detergente 500ml",
-      "descripcion": "Detergente Magistral",
-      "categoria": "Limpieza",
-      "precio": 280,
-      "codigoBarras": "7790060002",
-      "proveedorId": "6",
-      "descuentoId": null,
-      "fotoUrl": "https://cugat.cl/wp-content/uploads/2023/12/28801.jpg"
-    },
-    {
-      "id": "14",
-      "nombre": "Cerveza Lager 1L",
-      "descripcion": "Cerveza rubia",
-      "categoria": "Bebidas",
-      "precio": 250,
-      "codigoBarras": "7790020003458",
-      "proveedorId": "2",
-      "descuentoId": "3",
-      "fotoUrl": "https://masonline.com.ar/wp-content/uploads/2021/07/bud-1l-ret.jpg"
     }
   ],
   "existencias": [
@@ -251,7 +141,7 @@
       "cantidad": 0,
       "fechaEntrada": "2025-10-15",
       "fechaVencimiento": "2026-01-20",
-      "productoId": "3"
+      "productoId": null
     },
     {
       "id": "4",
@@ -363,7 +253,7 @@
       "cantidad": 50,
       "fechaEntrada": "2025-11-02",
       "fechaVencimiento": "2026-02-01",
-      "productoId": "3"
+      "productoId": null
     }
   ]
 }
