@@ -3,7 +3,7 @@ import { NavbarComponent } from '../../components/navbar/navbar/navbar.component
 import { ProductoService } from '../../services/producto.service';
 import { CommonModule } from '@angular/common';
 import { Producto } from '../../model/producto';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-producto',

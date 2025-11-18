@@ -1,9 +1,9 @@
-import { Router, Routes } from '@angular/router';
+import { ProductoService } from './../../services/producto.service';
+import { Producto } from './../../model/producto';
+import { ActivatedRoute, Router, RouterLink, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { ProductoService } from '../../services/producto.service';
-import { Producto } from '../../model/producto';
 import { ProveedorService } from '../../services/proveedor.service';
 import { DescuentoService } from '../../services/descuento.service';
 import { Proveedor } from '../../model/proveedor';
@@ -25,6 +25,9 @@ export class ProductoFormComponent implements OnInit {
   public descuentoService = inject(DescuentoService);
   public proveedores  = signal<Proveedor[]>([]);
   public descuentos  = signal<Descuento[]>([]);
+  private ruta = inject(ActivatedRoute);
+  productoId : number|null = null
+  isEditMode : boolean=false;
 
 
 
@@ -70,12 +73,43 @@ export class ProductoFormComponent implements OnInit {
     if(this.productForm.invalid){
       return;
     }
-    this.postProducts();
+    if(this.isEditMode && this.productoId){
+      this.productService.updateProducto(this.productoId, this.productForm.value).subscribe({
+        next : ()=>{
+          alert('Producto actualizado correctamente');
+          this.routes.navigate(['productos/productoList']);
+        },
+        error : (e)=>{
+          console.error(e);
+
+        }
+      })
+    }else{
+      this.postProducts();
+    }
   }
 
   ngOnInit(): void {
     this.getDescuentos();
     this.getProveedores();
+     const id = this.ruta.snapshot.paramMap.get('id');
+     if(id){
+      this.productoId=+id;
+      this.isEditMode=true;
+      this.loadProductoData(this.productoId);
+     }
+  }
+
+  loadProductoData(id:number){
+    this.productService.getProductoById(+id).subscribe({
+      next : (producto)=>{
+        this.productForm.patchValue(producto);
+      },
+      error : (e)=>{
+        console.error(e);
+
+      }
+    })
   }
 
     getDescuentos(){
@@ -113,4 +147,6 @@ export class ProductoFormComponent implements OnInit {
       }
     })
   }
+
+
 }
