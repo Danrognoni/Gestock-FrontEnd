@@ -4,10 +4,11 @@
   @if (authService.currentUser()?.rol === 'ADMINISTRADOR') {
     <a routerLink="/productos">Gestión de Productos</a>
     <a routerLink="/proveedores">Gestión de Proveedores</a>
-    <a routerLink="/descuento">Descuentos</a>
+    <a routerLink="/descuento"> Gestion de Descuentos</a>
+    <a routerLink="/existencia">Gestion de Existencias</a>
   }
   @if (authService.currentUser()?.rol === 'EMPLEADO') {
-    <a routerLink="/existencia">Ver Existencias</a>
+    <a routerLink="/existencia">Gestion de  Existencias</a>
      <a routerLink="/productos">Gestión de Productos</a>
 
   }

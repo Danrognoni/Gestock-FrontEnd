@@ -95,6 +95,7 @@ export const routes: Routes = [
       { path: '', redirectTo: 'existenciaList', pathMatch: 'full' },
       { path: 'existenciaList', component: ExistenciaComponent },
       { path: 'createExistencia', component: ExistenciaFormComponent },
+      {path : 'editExistencia/:id', component:ExistenciaFormComponent},
       { path: 'existenciaDetail/:id', component: ExistenciaDetailComponent }
     ]
   },
