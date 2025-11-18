@@ -88,15 +88,13 @@
   ],
   "productos": [
     {
-      "id": "1",
-      "nombre": "Leche Entera 1L",
-      "descripcion": "Leche entera pasteurizada",
+      "nombre": "Leche descremada",
+      "descripcion": "Leche descremada de vaca",
       "categoria": "Lácteos",
       "precio": 120.5,
       "codigoBarras": "7790010001234",
-      "proveedorId": "1",
-      "descuentoId": "1",
-      "fotoUrl": "https://statics.dinoonline.com.ar/imagenes/large_460x460/3260728_l.jpg"
+      "fotoUrl": "https://statics.dinoonline.com.ar/imagenes/large_460x460/3260728_l.jpg",
+      "id": "1"
     },
     {
       "id": "2",

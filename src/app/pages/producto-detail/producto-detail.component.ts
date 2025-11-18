@@ -1,12 +1,12 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ProductoService } from '../../services/producto.service';
 import { Producto } from '../../model/producto';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-producto-detail',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './producto-detail.component.html',
   styleUrl: './producto-detail.component.css',
   standalone:true

@@ -60,6 +60,7 @@ export const routes: Routes = [
       { path: '', redirectTo: 'productoList', pathMatch: 'full' },
       { path: 'productoList', component: ProductoComponent },
       { path: 'createProducto', component: ProductoFormComponent },
+      {path:'editProducto/:id', component:ProductoFormComponent},
       { path: 'productoDetail/:id', component: ProductoDetailComponent }
     ]
   },
