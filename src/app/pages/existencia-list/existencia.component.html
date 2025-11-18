@@ -32,6 +32,10 @@
           </div>
         </div>
         <button (click)="deleteExistencia(existencia.id)">Eliminar</button>
+         <button class="button" [routerLink]="['/existencia/editExistencia', existencia.id]" style="background-color: #ffc107; color: black; margin-top: 5px;">
+      Editar
+    </button>
+
       </article>
     } @empty {
       <p class="empty-state">No se encontraron existencias.</p>

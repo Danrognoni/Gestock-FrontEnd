@@ -1,13 +1,13 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { ExistenciaService } from '../../services/existencia.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { Existencia } from '../../model/existencia';
 import { ProductoService } from '../../services/producto.service';
 import { Producto } from '../../model/producto';
 
 @Component({
   selector: 'app-existencia',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './existencia.component.html',
   styleUrl: './existencia.component.css'
 })
