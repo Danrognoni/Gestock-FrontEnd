@@ -24,7 +24,7 @@ export class ProveedorComponent {
   cargarProveedores(): void {
     this.proveedorService.getProveedores().subscribe({
       next: (data) => {
-        this.proveedores.set(data); // <-- Actualiza la señal
+        this.proveedores.set(data);
       },
       error: (e) => {
         console.error("Error al cargar proveedores", e);

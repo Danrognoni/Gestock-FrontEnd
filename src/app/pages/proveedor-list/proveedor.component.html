@@ -2,11 +2,11 @@
   <h2>Proveedores</h2>
   <section class="proveedor-container">
     @for (proveedor of proveedores(); track proveedor.id) {
-      <article class="proveedor-card" (click)="proveedorDetail(proveedor.id)">
+      <article class="proveedor-card">
         <img [src]="proveedor.imagen" alt="Imagen de {{proveedor.nombre}}">
-        <h2>{{proveedor.nombre}}</h2>
-        <button (click)="deleteProveedor(proveedor.id)">Eliminar</button>
+        <button class="button" (click)="proveedorDetail(proveedor.id)">{{ proveedor.nombre }}</button>
       </article>
+      <button (click)="deleteProveedor(proveedor.id)">Eliminar</button>
     }
   </section>
 </div>

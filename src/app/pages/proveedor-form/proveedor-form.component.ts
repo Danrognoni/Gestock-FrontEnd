@@ -20,7 +20,8 @@ export class ProveedorFormComponent {
       nombre: ["", Validators.required],
       telefono: ["", Validators.required],
       email: ["", [Validators.required, Validators.email]],
-      direccion: ["", Validators.required]
+      direccion: ["", Validators.required],
+      imagen : ['', Validators.required]
     })
   }
 
@@ -53,7 +54,7 @@ export class ProveedorFormComponent {
   postProducts(){
     return this.proveedorService.postProveedor(this.proveedorForm.value).subscribe({
       next: (newProduct) => {
-        this.routes.navigate(["/proveedor"]);
+        this.routes.navigate(["/proveedores/proveedorList"]);
       },
       error: (e) => {
         console.log("error");
