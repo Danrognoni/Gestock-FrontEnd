@@ -1,0 +1,7 @@
+/* Hereda estilos de container y form básicos */
+:host {
+  display: block;
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+}
