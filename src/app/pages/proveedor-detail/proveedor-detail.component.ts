@@ -24,7 +24,7 @@ export class ProveedorDetailComponent implements OnInit{
   getProveedorById(){
     const id = this.routes.snapshot.paramMap.get('id');
     if(id){
-      this.proveedorService.getProveedorById(+id).subscribe({
+      this.proveedorService.getProveedorById(id).subscribe({
         next : (data)=>{
           this.proveedor.set(data);
         },

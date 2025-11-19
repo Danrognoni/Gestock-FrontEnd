@@ -19,12 +19,12 @@ export class ProveedorService {
     return this.httpClient.post<Proveedor>(this.apiUrl, data);
   }
 
-  getProveedorById(id : number){
+  getProveedorById(id : string){
     const url = `${this.apiUrl}/${id}`;
     return this.httpClient.get<any>(url);
   }
 
-  deleteProveedor(id:number){
+  deleteProveedor(id:string){
     const url = `${this.apiUrl}/${id}`;
     return this.httpClient.delete(url);
   }
