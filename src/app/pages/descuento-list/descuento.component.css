@@ -1,102 +1,96 @@
-
 .descuentos-container {
   max-width: 1200px;
-  margin: 20px auto;
-  padding: 0 15px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
 }
 
-
-.descuentos-container h1 {
+h1 {
   text-align: center;
-  color: #f1f1f1;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  font-size: 2.5em;
-  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(to right, var(--success), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
 
 .descuentos-grid {
   display: grid;
-
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 25px;
+  gap: 2rem;
 }
 
-
 .descuento-card {
-  background-color: #1e1e1e;
-  border-radius: 10px;
-  border: 1px solid #2a2a2a;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
+  position: relative;
 }
 
 .descuento-card:hover {
   transform: translateY(-8px);
-
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6),
-    0 0 15px rgba(109, 93, 224, 0.3);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: var(--success);
 }
 
-
 .card-header {
-  padding: 20px;
-
-  border-bottom: 1px solid #2a2a2a;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), transparent);
+  border-bottom: 1px solid var(--border);
 }
 
 .card-header h2 {
-  margin: 0;
   font-size: 1.5rem;
-  font-weight: 600;
-
-  color: #6D5DE0;
+  color: var(--success);
+  margin: 0;
 }
-
 
 .card-body {
-  padding: 20px;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 }
-
 
 .data-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1rem;
 }
 
 .data-label {
-  font-weight: 600;
-  color: #c0c0c0;
+  color: var(--text-muted);
 }
 
 .data-value {
-  font-weight: 500;
-  color: #f1f1f1;
-
-  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-main);
 }
 
-
-.data-item:first-child .data-value {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #34d399;
+.descuento-card button {
+  width: calc(100% - 3rem);
+  margin: 0 1.5rem 1.5rem 1.5rem;
+  padding: 0.75rem;
+  background-color: transparent;
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
 }
 
+.descuento-card button:hover {
+  background-color: var(--danger);
+  color: white;
+}
 
 .empty-state {
-  color: #777;
-  font-style: italic;
-  text-align: center;
-  padding: 40px;
-
   grid-column: 1 / -1;
+  padding: 3rem;
+  text-align: center;
+  background-color: var(--bg-card);
+  border-radius: 1rem;
+  border: 1px dashed var(--border);
+  color: var(--text-muted);
 }
