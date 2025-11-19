@@ -4,7 +4,7 @@ import { Routes } from '@angular/router';
 // Componentes Públicos y de Navegación
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { AccesDeniedComponent } from './pages/acces-denied/acces-denied.component';
+import { AccessDeniedComponent } from './pages/access-denied/access-denied.component';
 
 // Componentes de "Productos"
 import { ProductoNavComponent } from './components/producto-nav/producto-nav.component';
@@ -46,8 +46,8 @@ export const routes: Routes = [
     canActivate: [authGuardFnLogin]
   },
   {
-    path: 'Acces-denied',
-    component: AccesDeniedComponent
+    path: 'access-denied',
+    component: AccessDeniedComponent
   },
 
 

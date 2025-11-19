@@ -13,7 +13,7 @@ export const adminGuard: CanActivateFn = (route, state) => {
   if (authService.estoyLogeado() && user?.rol === 'ADMINISTRADOR') {
     return true;
   }else{
-     return router.createUrlTree(['/Acces-denied']);
+     return router.createUrlTree(['access-denied']);
   }
 
 
