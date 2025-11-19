@@ -29,7 +29,7 @@ getProductos(): Observable<Producto[]> {
       return this.http.post<Producto>(this.apiurl, data);
   }
 
-  getProductoById(id : number){
+  getProductoById(id : string){
     const url = `${this.apiurl}/${id}`;
     return this.http.get<any>(url + '?_expand=proveedor&_expand=descuento' );
   }
@@ -39,7 +39,7 @@ getProductos(): Observable<Producto[]> {
     return this.http.delete(url);
   }
 
-   updateProducto(id:number, data : Producto): Observable<Producto>{
+   updateProducto(id:string, data : Producto): Observable<Producto>{
     const url = `${this.apiurl}/${id}`;
     return this.http.put<Producto>(url, data);
   }

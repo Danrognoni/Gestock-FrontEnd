@@ -4,43 +4,47 @@
   <div class="existencias-grid">
 
     @for (existencia of existencias; track existencia.id) {
-      <article class="existencia-card">
+    <article class="existencia-card">
 
-        <header class="card-header">
-          @for(producto of productos();track producto.id){
-            @if(producto.id == existencia.productoId){
-              <h3>Producto : {{ producto.nombre }}</h3>
-            }
-          }
+      <header class="card-header">
+        @for(producto of productos();track producto.id){
+        @if(producto.id == existencia.productoId){
+        <h3>Producto : {{ producto.nombre }}</h3>
+        }
+        }
 
-        </header>
+      </header>
 
-        <div class="card-body">
-          <div class="data-item">
-            <span class="data-label">Cantidad:</span>
-            <span class="data-value">{{ existencia.cantidad }}</span>
-          </div>
+      <div class="card">
+        <p><strong></strong> {{ existencia.producto?.nombre }}</p>
+      </div>
 
-          <div class="data-item">
-            <span class="data-label">Fecha de Entrada:</span>
-            <span class="data-value">{{ existencia.fechaEntrada }}</span>
-          </div>
-
-          <div class="data-item">
-            <span class="data-label">Fecha de Vencimiento:</span>
-            <span class="data-value">{{ existencia.fechaVencimiento }}</span>
-          </div>
+      <div class="card-body">
+        <div class="data-item">
+          <span class="data-label">Cantidad:</span>
+          <span class="data-value">{{ existencia.cantidad }}</span>
         </div>
-        <button (click)="deleteExistencia(existencia.id)">Eliminar</button>
-         <button class="button" [routerLink]="['/existencia/editExistencia', existencia.id]" style="background-color: #ffc107; color: black; margin-top: 5px;">
-      Editar
-    </button>
 
-      </article>
+        <div class="data-item">
+          <span class="data-label">Fecha de Entrada:</span>
+          <span class="data-value">{{ existencia.fechaEntrada }}</span>
+        </div>
+
+        <div class="data-item">
+          <span class="data-label">Fecha de Vencimiento:</span>
+          <span class="data-value">{{ existencia.fechaVencimiento }}</span>
+        </div>
+      </div>
+      <button (click)="deleteExistencia(existencia.id)">Eliminar</button>
+      <button class="button" [routerLink]="['/existencia/editExistencia', existencia.id]"
+        style="background-color: #ffc107; color: black; margin-top: 5px;">
+        Editar
+      </button>
+
+    </article>
     } @empty {
-      <p class="empty-state">No se encontraron existencias.</p>
+    <p class="empty-state">No se encontraron existencias.</p>
     }
 
   </div>
 </section>
-

@@ -8,7 +8,7 @@
         <label for="nombre">Nombre</label>
         <input type="text" id="id-nombre" formControlName="nombre">
         @if(nombre?.invalid && (nombre?.touched)){
-          <p class="error-msg">El nombre es obligatorio</p>
+        <p class="error-msg">El nombre es obligatorio</p>
         }
       </div>
 
@@ -16,7 +16,7 @@
         <label for="descripcion">Descripcion</label>
         <input type="text" id="id-descripcion" formControlName="descripcion">
         @if(descripcion?.invalid && (descripcion?.touched)){
-          <p class="error-msg">La descripcion es obligatorio</p>
+        <p class="error-msg">La descripcion es obligatorio</p>
         }
       </div>
 
@@ -24,7 +24,7 @@
         <label for="categoria">Categoria</label>
         <input type="text" id="id-categoria" formControlName="categoria">
         @if(categoria?.invalid && (categoria?.touched)){
-          <p class="error-msg">La categoria es obligatorio</p>
+        <p class="error-msg">La categoria es obligatorio</p>
         }
       </div>
 
@@ -32,10 +32,10 @@
         <label for="precio">Precio</label>
         <input type="number" id="id-precio" formControlName="precio">
         @if(precio?.invalid && (precio?.touched)){
-          <p class="error-msg">El precio es obligatorio</p>
-          @if(precio?.hasError("min")){
-            <p class="error-msg">El precio no puede ser menor a 0</p>
-          }
+        <p class="error-msg">El precio es obligatorio</p>
+        @if(precio?.hasError("min")){
+        <p class="error-msg">El precio no puede ser menor a 0</p>
+        }
         }
       </div>
 
@@ -45,25 +45,24 @@
       </div>
 
       <div class="formulario">
-        <label for="proveedor">Proveedor</label>
-        <select id="proveedorId" formControlName="proveedor">
-          <option [ngValue]="null" disabled>Seleccionar proveedor</option>
-          @for(proveedor of proveedores(); track proveedor.id){
-            <option [value]="proveedor.id">{{proveedor.nombre}}</option>
-          }@empty {
-            <option disabled>Cargando proveedores</option>
+        <label for="proveedorId">Proveedor</label>
+        <select id="proveedorId" formControlName="proveedorId">
+          <option [ngValue]="null" disabled>Seleccionar Proveedor</option>
+
+          @for(prov of proveedores(); track prov.id){
+          <option [value]="prov.id">{{ prov.nombre }}</option>
           }
         </select>
       </div>
 
       <div class="formulario">
         <label for="descuento">Descuento</label>
-        <select id="descuentoId" formControlName="descuento">
+        <select id="descuentoId" formControlName="descuentoId">
           <option [ngValue]="null" disabled>Seleccionar descuento</option>
           @for(descuento of descuentos(); track descuento.id){
-            <option [value]="descuento.id">{{descuento.descripcion}}</option>
+          <option [value]="descuento.id">{{descuento.descripcion}}</option>
           }@empty {
-            <option disabled>Cargando descuentos</option>
+          <option disabled>Cargando descuentos</option>
           }
         </select>
       </div>

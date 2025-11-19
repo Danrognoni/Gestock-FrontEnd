@@ -31,6 +31,7 @@ export class ExistenciaFormComponent implements OnInit{
       cantidad: ['', Validators.required],
       fechaEntrada: ['', [Validators.required, Validators.max(this.anio)]],
       fechaVencimiento: ['', Validators.required],
+      productoId : ['', Validators.required]
     })
   }
 
@@ -80,28 +81,31 @@ export class ExistenciaFormComponent implements OnInit{
     });
   }
 
-  onSubmit(): void {
-    this.existenciaForm.markAllAsTouched;
-    if(this.existenciaForm.invalid){
-      return;
-    }
+ onSubmit(): void {
 
-    if(this.isEditMode && this.productoId){
-      this.existenciaService.updateExistencia(this.existenciaId, this.existenciaForm.value).subscribe({
-        next : ()=>{
-          alert('Existencia actualizada correctamente');
-          this.routes.navigate(['existencia/existenciaList']);
-        },
-        error : (e)=>{
-          console.error(e);
+  this.existenciaForm.markAllAsTouched();
 
-        }
-      })
-    }else{
-      this.postExistencia();
-    }
-
+  if(this.existenciaForm.invalid){
+    return;
   }
+
+
+  if(this.isEditMode && this.existenciaId){
+
+    this.existenciaService.updateExistencia(this.existenciaId, this.existenciaForm.value).subscribe({
+      next : ()=>{
+        alert('Existencia actualizada correctamente');
+        // Corrige routes -> this.routes (que es el Router)
+        this.routes.navigate(['existencia']);
+      },
+      error : (e)=>{
+        console.error(e);
+      }
+    })
+  } else {
+    this.postExistencia();
+  }
+}
 
   postExistencia(){
     return this.existenciaService.postExistencias(this.existenciaForm.value).subscribe({

@@ -26,9 +26,11 @@ export class ProductoDetailComponent implements OnInit{
   getProductoById(){
     const id = this.ruta.snapshot.paramMap.get('id');
     if(id){
-      this.productoService.getProductoById(+id).subscribe({
+      this.productoService.getProductoById(id).subscribe({
         next : (data)=>{
           this.producto.set(data);
+          console.log('Datos del producto:', data);
+        console.log('¿Tiene proveedor?', data.proveedor);
         },
         error : (e)=>{
           console.error(e);

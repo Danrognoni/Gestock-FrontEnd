@@ -1,34 +1,41 @@
 @if (producto(); as producto) {
-  <div class="detalle-container">
+<div class="detalle-container">
 
-    <button (click)="volver()" class="btn-volver">Volver</button>
+  <button (click)="volver()" class="btn-volver">Volver</button>
 
-    <div class="comic-detalle">
+  <div class="comic-detalle">
 
-      <div class="detalle-imagen">
-        <img [src]="producto.fotoUrl" [alt]="producto.nombre">
-      </div>
-
-      <div class="detalle-info">
-        <h1 class="info-title">{{ producto.nombre }}</h1>
-
-        <p class="info-description">{{ producto.descripcion }}</p>
-
-        <p class="info-authors"><strong>Categoría:</strong> {{ producto.categoria }}</p>
-        <p class="info-authors"><strong>Código:</strong> {{ producto.codigoBarras }}</p>
-
-        <div class="info-footer">
-          <span class="info-genre">Producto</span>
-          <span class="info-price">{{ producto.precio | currency:'$' }}</span>
-        </div>
-      </div>
-
+    <div class="detalle-imagen">
+      <img [src]="producto.fotoUrl" [alt]="producto.nombre">
     </div>
-     <button class="button" [routerLink]="['/productos/editProducto', producto.id]" style="background-color: #ffc107; color: black; margin-top: 5px;">
-      Editar
-    </button>
+
+    <div class="detalle-info">
+      <h1 class="info-title">{{ producto.nombre }}</h1>
+
+      <p class="info-description">{{ producto.descripcion }}</p>
+
+      <p class="info-authors"><strong>Categoría:</strong> {{ producto.categoria }}</p>
+      <p class="info-authors"><strong>Código:</strong> {{ producto.codigoBarras }}</p>
+
+      <p>Proveedor: {{ producto.proveedor?.nombre }}</p>
+
+      @if(producto.descuento){
+      <p class="oferta">¡Descuento del {{ producto.descuento.porcentaje }}%!</p>
+      }
+
+      <div class="info-footer">
+        <span class="info-genre">Producto</span>
+        <span class="info-price">{{ producto.precio | currency:'$' }}</span>
+      </div>
+    </div>
 
   </div>
+  <button class="button" [routerLink]="['/productos/editProducto', producto.id]"
+    style="background-color: #ffc107; color: black; margin-top: 5px;">
+    Editar
+  </button>
+
+</div>
 } @else {
-  <p class="cargando">Cargando detalles del producto...</p>
+<p class="cargando">Cargando detalles del producto...</p>
 }

@@ -26,7 +26,7 @@ export class ProductoFormComponent implements OnInit {
   public proveedores  = signal<Proveedor[]>([]);
   public descuentos  = signal<Descuento[]>([]);
   private ruta = inject(ActivatedRoute);
-  productoId : number|null = null
+  productoId : string|null = null
   isEditMode : boolean=false;
 
 
@@ -38,7 +38,9 @@ export class ProductoFormComponent implements OnInit {
       categoria : ['', Validators.required],
       precio : ['', [Validators.required, Validators.min(1)]],
       codigoBarras : [''],
-      fotoUrl : ['']
+      fotoUrl : [''],
+      descuentoId: ['', Validators.required],
+      proveedorId : ['', Validators.required]
     })
   }
 
@@ -94,14 +96,14 @@ export class ProductoFormComponent implements OnInit {
     this.getProveedores();
      const id = this.ruta.snapshot.paramMap.get('id');
      if(id){
-      this.productoId=+id;
+      this.productoId=id;
       this.isEditMode=true;
       this.loadProductoData(this.productoId);
      }
   }
 
-  loadProductoData(id:number){
-    this.productService.getProductoById(+id).subscribe({
+  loadProductoData(id:string){
+    this.productService.getProductoById(id).subscribe({
       next : (producto)=>{
         this.productForm.patchValue(producto);
       },

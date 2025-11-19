@@ -1,5 +1,8 @@
+import { Descuento } from "./descuento";
+import { Proveedor } from "./proveedor";
+
 export interface Producto {
-  id:number;
+  id:string;
   nombre:string;
   descripcion:string;
   categoria:string;
@@ -8,4 +11,6 @@ export interface Producto {
   proveedorId:number;
   descuentoId:number;
   fotoUrl : string;
+  descuento?: Descuento;
+  proveedor? : Proveedor;
 }
