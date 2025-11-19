@@ -33,6 +33,7 @@ export class DescuentoComponent implements OnInit {
    }
    )
   }
+
   deleteDescuento(id:number){
     if(confirm("Estás seguro de que desea eliminar este descuento?")){
       this.descuentoService.deleteDescuento(id).subscribe({

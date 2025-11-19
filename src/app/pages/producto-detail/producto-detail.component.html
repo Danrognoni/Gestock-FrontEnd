@@ -17,11 +17,18 @@
       <p class="info-authors"><strong>Categoría:</strong> {{ producto.categoria }}</p>
       <p class="info-authors"><strong>Código:</strong> {{ producto.codigoBarras }}</p>
 
-      <p>Proveedor: {{ producto.proveedor?.nombre }}</p>
-
-      @if(producto.descuento){
-      <p class="oferta">¡Descuento del {{ producto.descuento.porcentaje }}%!</p>
+      @for(prov of proveedores();track prov.id){
+        @if(prov.id == producto.proveedorId){
+            <p class="info-authors"><strong>Proveedor:</strong> {{ prov.nombre }}</p>
+        }
       }
+
+      @for(descuento of descuentos();track descuento.id){
+        @if(descuento.id == producto.descuentoId){
+            <p class="info-authors"><strong>Porcentaje Descuento : </strong> {{ descuento.porcentaje }}%</p>
+        }
+      }
+
 
       <div class="info-footer">
         <span class="info-genre">Producto</span>
