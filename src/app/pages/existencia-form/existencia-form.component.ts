@@ -64,7 +64,6 @@ export class ExistenciaFormComponent implements OnInit{
       },
       error : (e)=>{
         console.error(e);
-
       }
     })
   }

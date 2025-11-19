@@ -97,15 +97,13 @@
       "id": "1"
     },
     {
-      "id": "2",
-      "nombre": "Yogur Frutilla 500g",
+      "nombre": "Chocolate",
       "descripcion": "Yogur bebible sabor frutilla",
       "categoria": "Lácteos",
       "precio": 95.75,
       "codigoBarras": "7790010001235",
-      "proveedorId": "1",
-      "descuentoId": null,
-      "fotoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfl5fOzsDGTZ1PHwTbEPeccaSmFWqPAYGCBw&s"
+      "fotoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfl5fOzsDGTZ1PHwTbEPeccaSmFWqPAYGCBw&s",
+      "id": "2"
     },
     {
       "id": "4",
@@ -117,6 +115,15 @@
       "proveedorId": "2",
       "descuentoId": "2",
       "fotoUrl": "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3040004_f.jpg"
+    },
+    {
+      "id": "5",
+      "nombre": "adsasads",
+      "descripcion": "adsadsads",
+      "categoria": "adsadsasads",
+      "precio": 43,
+      "codigoBarras": 32532532,
+      "fotoUrl": ""
     }
   ],
   "existencias": [
