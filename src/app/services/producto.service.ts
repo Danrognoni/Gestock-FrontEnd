@@ -18,9 +18,12 @@ export class ProductoService {
     this.productos= [];
   }
 
-  getProductos(){
-   return  this.http.get<Producto[]>(this.apiurl);
-  }
+
+
+getProductos(): Observable<Producto[]> {
+
+  return this.http.get<Producto[]>(this.apiurl + '?_expand=proveedor&_expand=descuento');
+}
 
   postProductos(data : Omit<Producto, 'id'>): Observable<Producto>{
       return this.http.post<Producto>(this.apiurl, data);
@@ -28,7 +31,7 @@ export class ProductoService {
 
   getProductoById(id : number){
     const url = `${this.apiurl}/${id}`;
-    return this.http.get<any>(url);
+    return this.http.get<any>(url + '?_expand=proveedor&_expand=descuento' );
   }
 
   deleteProducto(id:number){

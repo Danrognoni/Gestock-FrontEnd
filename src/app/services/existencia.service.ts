@@ -14,9 +14,11 @@ export class ExistenciaService {
       this.existencias=[];
    }
 
-  getExistencias(){
-    return this.http.get<Existencia[]>(this.apiUrl);
-  }
+
+
+getExistencias(){
+  return this.http.get<Existencia[]>(this.apiUrl + '?_expand=producto');
+}
 
   postExistencias(data: Omit<Existencia, 'id'>): Observable<Existencia>{
     return this.http.post<Existencia>(this.apiUrl, data);
