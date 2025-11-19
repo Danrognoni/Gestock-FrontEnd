@@ -72,6 +72,7 @@ export const routes: Routes = [
       { path: '', redirectTo: 'proveedorList', pathMatch: 'full' },
       { path: 'proveedorList', component: ProveedorComponent },
       { path: 'createProveedor', component: ProveedorFormComponent },
+      {path: "editProveedores/:id", component:ProveedorFormComponent},
       { path: 'proveedorDetail/:id', component: ProveedorDetailComponent }
     ]
   },

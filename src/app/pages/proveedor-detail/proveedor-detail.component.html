@@ -15,6 +15,7 @@
           <p><strong>Dirección:</strong> {{ proveedor.direccion }}</p>
         </div>
       </div>
+      <button class="button" [routerLink]='["/proveedores/editProveedores", proveedor.id]'>Editar</button>
     </div>
   }
 </section>

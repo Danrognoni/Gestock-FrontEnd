@@ -15,13 +15,18 @@ export class ProveedorService {
     return this.httpClient.get<Proveedor[]>(this.apiUrl);
   }
 
-  postProveedor(data: Omit<Proveedor, 'id'>):Observable<Proveedor>{
+  postProveedor(data: Proveedor):Observable<Proveedor>{
     return this.httpClient.post<Proveedor>(this.apiUrl, data);
   }
 
   getProveedorById(id : string){
     const url = `${this.apiUrl}/${id}`;
-    return this.httpClient.get<any>(url);
+    return this.httpClient.get<Proveedor>(url);
+  }
+
+  updateProveedor(id:string, data:Proveedor):Observable<Proveedor>{
+    const url = `${this.apiUrl}/${id}`;
+    return this.httpClient.put<Proveedor>(url, data);
   }
 
   deleteProveedor(id:string){

@@ -1,11 +1,11 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { ProveedorService } from '../../services/proveedor.service';
 import { Proveedor } from '../../model/proveedor';
 
 @Component({
   selector: 'app-proveedor-detail',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './proveedor-detail.component.html',
   styleUrl: './proveedor-detail.component.css'
 })
