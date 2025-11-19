@@ -31,6 +31,7 @@ export class ProveedorComponent {
       }
     });
   }
+
   proveedorDetail(id: number){
     this.router.navigate(['proveedores/proveedorDetail/', id]);
 

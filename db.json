@@ -17,7 +17,24 @@
       "rol": "EMPLEADO"
     }
   ],
-  "proveedores": [],
+  "proveedores": [
+    {
+      "id": "a30f",
+      "nombre": "werwer",
+      "telefono": 54252,
+      "email": "dadasd@gmail.com",
+      "direccion": "dasdasfa326ggds",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScSgLNfWbYvjuahn4Ur0gGyCa79ZlBWh-8CA&s"
+    },
+    {
+      "id": "5849",
+      "nombre": "adsadsadsadsads",
+      "telefono": 252525252,
+      "email": "asadsd@gmail.com",
+      "direccion": "gdsgsgs",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR738BJ0IlpN1tYoWuhmAbcMUIUp7yBoz-oOw&s"
+    }
+  ],
   "descuentos": [
     {
       "id": "1",
@@ -72,6 +89,17 @@
       "descuentoId": null,
       "proveedorId": "2",
       "id": "4"
+    },
+    {
+      "id": "96aa",
+      "nombre": "Chupetin",
+      "descripcion": "adsadsads",
+      "categoria": "adsadsadsads",
+      "precio": 54352,
+      "codigoBarras": 43643672,
+      "fotoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScSgLNfWbYvjuahn4Ur0gGyCa79ZlBWh-8CA&s",
+      "descuentoId": "4",
+      "proveedorId": "a30f"
     }
   ],
   "existencias": [
