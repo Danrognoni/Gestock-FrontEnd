@@ -1,7 +1,94 @@
-/* Hereda estilos de container y form básicos */
 :host {
   display: block;
   padding: 2rem;
   text-align: center;
   color: var(--text-muted);
+}
+
+.container {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--text-main);
+}
+
+.form-container {
+  background-color: var(--bg-card);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-weight: 600;
+  color: var(--secondary);
+  font-size: 0.95rem;
+}
+
+input, select {
+  padding: 0.875rem;
+  background-color: var(--bg-body);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  color: var(--text-main);
+  font-size: 1rem;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+.error-msg {
+  color: var(--danger);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-actions {
+  margin-top: 2.5rem;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px rgba(99, 102, 241, 0.5);
+}
+
+.btn-primary:disabled {
+  background-color: var(--border);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
