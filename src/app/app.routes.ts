@@ -36,8 +36,6 @@ import { AuthGuardFnComponent } from './auth/guards/auth.guard.fn.component';
 
 
 export const routes: Routes = [
-
-
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   {
@@ -49,7 +47,6 @@ export const routes: Routes = [
     path: 'access-denied',
     component: AccessDeniedComponent
   },
-
 
   {
     path: 'productos',
@@ -64,6 +61,7 @@ export const routes: Routes = [
       { path: 'productoDetail/:id', component: ProductoDetailComponent }
     ]
   },
+
   {
     path: 'proveedores',
     component: ProveedorNavComponent,
@@ -75,6 +73,7 @@ export const routes: Routes = [
       { path: 'proveedorDetail/:id', component: ProveedorDetailComponent }
     ]
   },
+
   {
     path: 'descuento',
     component: DescuentoNavComponent,
@@ -82,10 +81,10 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'descuentoList', pathMatch: 'full' },
       { path: 'descuentoList', component: DescuentoComponent },
-      { path: 'createDescuento', component: DescuentoFormComponent }
+      { path: 'createDescuento', component: DescuentoFormComponent },
+      { path: 'editDescuento/:id', component: DescuentoFormComponent }
     ]
   },
-
 
   {
     path: 'existencia',
@@ -99,7 +98,6 @@ export const routes: Routes = [
       { path: 'existenciaDetail/:id', component: ExistenciaDetailComponent }
     ]
   },
-
 
   { path: '**', redirectTo: 'home' }
 ];
