@@ -1,7 +1,13 @@
 <section class="descuentos-container">
   <h1>Descuentos</h1>
 
+  <button (click)="filtrarPorVencer()" class="btn-filtro btn-vencer">
+       Por Vencer
+    </button>
+
   <div class="descuentos-grid">
+
+
 
     @for (descuento of descuentos; track descuento.id) {
 

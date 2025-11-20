@@ -48,6 +48,13 @@
       "porcentaje": 50,
       "fechaInicio": "2025-11-15",
       "fechaFin": "2025-11-20"
+    },
+    {
+      "id": "523e",
+      "descripcion": "Friday Monday",
+      "porcentaje": 67,
+      "fechaInicio": "2026-05-15",
+      "fechaFin": "2025-11-29"
     }
   ],
   "productos": [

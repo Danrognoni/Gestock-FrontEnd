@@ -49,4 +49,16 @@ export class DescuentoComponent implements OnInit {
     }
   }
 
+  filtrarPorVencer(){
+    this.descuentoService.getDescuentosPorVencer(10).subscribe({
+      next : (data)=>{
+        this.descuentos=data;
+        if(data.length===0) alert("No hay descuento por vencer");
+      },
+      error : (e)=>{
+        console.error(e);
+
+      }
+    })
+  }
 }

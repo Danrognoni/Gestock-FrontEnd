@@ -67,7 +67,6 @@ export class ProductoComponent implements OnInit {
   }
   buscarProducto(termino: string) {
     const terminoLower = termino.toLowerCase().trim();
-
     if (!terminoLower) {
       this.Productos = [...this.todosLosProductos];
       return;

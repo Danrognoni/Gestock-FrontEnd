@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Descuento } from '../model/descuento';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
+import { Existencia } from '../model/existencia';
 
 @Injectable({
   providedIn: 'root'
@@ -37,5 +38,20 @@ export class DescuentoService {
   updateDescuento(id:string, data : Descuento): Observable<Descuento>{
     const url = `${this.apiURL}/${id}`;
     return this.http.put<Descuento>(url, data);
+  }
+
+  getDescuentosPorVencer(dias : number): Observable<Descuento[]>{
+    return this.getDescuentos().pipe(
+      map(lista =>{
+        const hoy = new Date();
+        const fechaLimite = new Date();
+        fechaLimite.setDate(hoy.getDate()+dias);
+        return lista.filter(item=>{
+          const fechaVencimiento = new Date(item.fechaFin);
+          return fechaVencimiento>= hoy && fechaVencimiento<= fechaLimite;
+        })
+
+      })
+    )
   }
 }
