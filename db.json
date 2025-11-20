@@ -17,7 +17,16 @@
       "rol": "EMPLEADO"
     }
   ],
-  "proveedores": [],
+  "proveedores": [
+    {
+      "id": "7095",
+      "nombre": "Sancor",
+      "telefono": 2281405939,
+      "email": "sancorbsas@gmail.com",
+      "direccion": "Necochea 5687",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Sancor_coop_logo.svg/1200px-Sancor_coop_logo.svg.png"
+    }
+  ],
   "descuentos": [
     {
       "id": "1",
