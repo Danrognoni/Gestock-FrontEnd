@@ -1,1 +1,64 @@
-<p>descuento-form works!</p>
+<section class="container">
+  <h1>{{ isEditMode ? 'Editar Descuento' : 'Agregar nuevo descuento' }}</h1>
+
+  <div class="form-container">
+    <form [formGroup]="descuentoForm" (ngSubmit)="onSubmit()">
+
+      <div class="formulario">
+        <label for="descripcion">Descripcion</label>
+        <input type="text" id="descripcion" formControlName="descripcion">
+        @if(descripcion?.invalid && (descripcion?.touched)){
+          <p class="error-msg">La descripcion es obligatoria</p>
+        }
+      </div>
+
+      <div class="formulario">
+        <label for="porcentaje">Porcentaje</label>
+        <input type="number" id="porcentaje" formControlName="porcentaje">
+        @if(porcentaje?.invalid && (porcentaje?.touched)){
+          @if(porcentaje?.hasError('required')){
+            <p class="error-msg">El porcentaje es obligatorio</p>
+          }
+          @if(porcentaje?.hasError('min')){
+            <p class="error-msg">El porcentaje es inválido</p>
+          }
+          @if(porcentaje?.hasError('max')){
+            <p class="error-msg">El porcentaje es inválido</p>
+          }
+        }
+      </div>
+
+      <div class="formulario">
+        <label for="fechaInicio">Fecha Inicio</label>
+        <input type="date" id="fechaInicio" formControlName="fechaInicio">
+        @if(fechaInicio?.invalid && (fechaInicio?.touched)){
+          @if(fechaInicio?.hasError('required')){
+            <p class="error-msg">La fecha inicio es obligatoria</p>
+          }
+          @if(fechaInicio?.hasError('min')){
+            <p class="error-msg">La fecha inicio es inválida</p>
+          }
+        }
+      </div>
+
+      <div class="formulario">
+        <label for="fechaFin">Fecha Fin</label>
+        <input type="date" id="fechaFin" formControlName="fechaFin">
+        @if(fechaFin?.invalid && (fechaFin?.touched)){
+          @if(fechaFin?.hasError('required')){
+            <p class="error-msg">La fecha inicio es obligatoria</p>
+          }
+          @if(fechaFin?.hasError('min')){
+            <p class="error-msg">La fecha inicio es inválida</p>
+          }
+        }
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-primary" [disabled]="descuentoForm.invalid">
+          {{ isEditMode ? 'Actualizar Descuento' : 'Guardar Descuento' }}
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
