@@ -1,57 +1,67 @@
 <section class="existencia-container">
-  <button class="button" (click)="volverAtras()">Volver</button>
-  <h1>Existencias</h1>
+
+  <div class="header-section">
+    <h1>Existencias</h1>
+  </div>
+
+  <div class="filtros-container">
+    <button (click)="getExistencias()" class="btn-filtro btn-todos">
+      Ver Todo
+    </button>
+    <button (click)="filtrarPorVencer()" class="btn-filtro btn-vencer">
+       Por Vencer
+    </button>
+    <button (click)="filtrarBajoStock()" class="btn-filtro btn-stock">
+       Bajo Stock
+    </button>
+  </div>
 
   <div class="existencias-grid">
     @for (existencia of existencias; track existencia.id) {
-    <article class="existencia-card">
+      <article class="existencia-card">
 
-      <header class="card-header">
-        @for(producto of productos();track producto.id){
-        @if(producto.id == existencia.productoId){
-        <h3>Producto : {{ producto.nombre }}</h3>
-        }
-        }
+        <header class="card-header">
+          @for(producto of productos(); track producto.id){
+            @if(producto.id == existencia.productoId){
+              <h3>{{ producto.nombre }}</h3>
+            }
+          }
+        </header>
 
-      </header>
+        <div class="card-body">
+          <div class="data-item">
+            <span class="data-label">Cantidad:</span>
+            <span class="data-value" [class.text-danger]="+existencia.cantidad < 10">
+              {{ existencia.cantidad }}
+            </span>
+          </div>
 
-      <div class="card-body">
-        <div class="data-item">
-          <span class="data-label">Cantidad:</span>
-          <span class="data-value">{{ existencia.cantidad }}</span>
+          <div class="data-item">
+            <span class="data-label">Entrada:</span>
+            <span class="data-value">{{ existencia.fechaEntrada }}</span>
+          </div>
+
+          <div class="data-item">
+            <span class="data-label">Vencimiento:</span>
+            <span class="data-value">{{ existencia.fechaVencimiento }}</span>
+          </div>
         </div>
 
-        <div class="data-item">
-          <span class="data-label">Fecha de Entrada:</span>
-          <span class="data-value">{{ existencia.fechaEntrada }}</span>
+        <div class="card-actions">
+          <button class="btn-eliminar" (click)="deleteExistencia(existencia.id)">
+            Eliminar
+          </button>
+          <button class="btn-editar" [routerLink]="['/existencia/editExistencia', existencia.id]">
+            Editar
+          </button>
         </div>
 
-        <div class="data-item">
-          <span class="data-label">Fecha de Vencimiento:</span>
-          <span class="data-value">{{ existencia.fechaVencimiento }}</span>
-        </div>
-      </div>
-      <button (click)="deleteExistencia(existencia.id)">Eliminar</button>
-      <button class="button" [routerLink]="['/existencia/editExistencia', existencia.id]"
-        style="background-color: #ffc107; color: black; margin-top: 5px;">
-        Editar
-      </button>
-
-
-    </article>
+      </article>
     } @empty {
-    <p class="empty-state">No se encontraron existencias.</p>
+      <div class="empty-state">
+        <p>No se encontraron existencias con los filtros actuales.</p>
+        <button (click)="getExistencias()" class="btn-link">Mostrar todas</button>
+      </div>
     }
-
-    <section class="existencia-container">
-
-        <div class="filtros-container" style="display: flex; gap: 10px; justify-content: center; margin-bottom: 20px;">
-          <button (click)="filtrarPorVencer()" style="background-color: #e11d48; color: white;"> Por Vencer </button>
-          <button (click)="filtrarBajoStock()" style="background-color: #f59e0b; color: black;"> Bajo Stock</button>
-        </div>
-
-      </section>
-
-
   </div>
 </section>

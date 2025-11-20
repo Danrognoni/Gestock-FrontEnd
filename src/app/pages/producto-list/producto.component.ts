@@ -15,7 +15,8 @@ import { Router, RouterLink } from '@angular/router';
 export class ProductoComponent implements OnInit {
 
   Productos: any[] = [];
-
+  Productos2: Producto[] = [];
+  todosLosProductos: Producto[] = [];
   productoService = inject(ProductoService);
 
   productoSeleccionado: Producto | null = null;
@@ -31,6 +32,7 @@ export class ProductoComponent implements OnInit {
       next: (data) => {
         console.log('Datos recibidos:', data);
         this.Productos = data;
+        this.todosLosProductos = data;
       },
       error: (e) => {
         console.error('ERROR al pedir productos:', e);
@@ -63,8 +65,23 @@ export class ProductoComponent implements OnInit {
       });
     }
   }
+  buscarProducto(termino: string) {
+    const terminoLower = termino.toLowerCase().trim();
 
+    if (!terminoLower) {
+      this.Productos = [...this.todosLosProductos];
+      return;
+    }
+    this.Productos = this.todosLosProductos.filter(p =>
+      p.nombre.toLowerCase().includes(terminoLower) ||
+      p.descripcion.toLowerCase().includes(terminoLower)
+    );
+  }
 
-
-
+  filtrarCategoria(categoria: string) {
+    this.productoService.getProductosPorCategoria(categoria).subscribe({
+      next: (data) => this.Productos = data,
+      error: (e) => console.error(e)
+    });
+  }
 }

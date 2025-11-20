@@ -1,3 +1,4 @@
+/* --- Título --- */
 h1 {
   text-align: center;
   margin: 2rem 0;
@@ -5,56 +6,159 @@ h1 {
   background: linear-gradient(to right, var(--primary), #a855f7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 800;
 }
 
 .container {
   width: 100%;
-  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
+/* --- Sección de Filtros y Búsqueda --- */
+.filtros-container {
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+
+/* Buscador */
+.search-box {
+  display: flex;
+  gap: 0; /* Sin espacio para que parezca una sola pieza */
+  width: 100%;
+  max-width: 600px;
+  background-color: var(--bg-body);
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  overflow: hidden; /* Para recortar las esquinas internas */
+  transition: all 0.2s ease;
+}
+
+.search-box:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+.search-box input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border: none;
+  background: transparent;
+  color: var(--text-main);
+  font-size: 1rem;
+  outline: none;
+}
+
+.btn-buscar {
+  padding: 0 1.5rem;
+  background-color: var(--bg-body);
+  color: var(--text-muted);
+  border: none;
+  border-left: 1px solid var(--border);
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.2s;
+}
+
+.btn-buscar:hover {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Categorías */
+.category-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-cat {
+  padding: 0.6rem 1.25rem;
+  border-radius: 2rem;
+  border: 1px solid var(--border);
+  background-color: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.btn-cat:hover {
+  border-color: var(--primary);
+  color: white;
+  background-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* --- Lista de Productos (Grid) --- */
 .productos-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 2rem;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .lista-productos {
   background-color: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 1rem;
+  border-radius: 1.25rem;
   overflow: hidden;
-  padding: 1.5rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .lista-productos:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
   border-color: var(--primary);
 }
 
 .img-producto {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
   border-radius: 0.75rem;
   background-color: var(--bg-body);
+  transition: transform 0.3s ease;
 }
 
+.lista-productos:hover .img-producto {
+  transform: scale(1.02);
+}
+
+/* Botones de la tarjeta */
+/* Botón Principal (Nombre del producto / Ver Detalle) */
 .button {
   background-color: var(--bg-body);
   color: var(--text-main);
   border: 1px solid var(--border);
-  padding: 0.75rem;
-  border-radius: 0.5rem;
+  padding: 0.875rem;
+  border-radius: 0.75rem;
   font-weight: 600;
+  font-size: 1rem;
   transition: all 0.2s;
   width: 100%;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 0.5rem;
 }
 
 .button:hover {
@@ -63,19 +167,35 @@ h1 {
   color: white;
 }
 
-button:not(.button) {
+/* Botón Eliminar (El que no tiene clase .button) */
+button:not(.button, .btn-buscar, .btn-cat) {
   background-color: transparent;
   color: var(--danger);
-  border: 1px solid var(--danger);
+  border: 1px solid transparent;
   padding: 0.5rem;
   border-radius: 0.5rem;
   font-size: 0.9rem;
   font-weight: 600;
   transition: all 0.2s;
   width: 100%;
+  cursor: pointer;
+  opacity: 0.8;
 }
 
-button:not(.button):hover {
-  background-color: var(--danger);
-  color: white;
+button:not(.button, .btn-buscar, .btn-cat):hover {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-color: var(--danger);
+  opacity: 1;
+}
+
+
+.no-results {
+  text-align: center;
+  color: var(--text-muted);
+  grid-column: 1 / -1;
+  padding: 4rem;
+  background-color: var(--bg-card);
+  border-radius: 1rem;
+  border: 1px dashed var(--border);
+  font-size: 1.1rem;
 }

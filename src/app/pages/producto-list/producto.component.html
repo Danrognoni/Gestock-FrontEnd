@@ -1,15 +1,36 @@
 <h1>Productos</h1>
 <section class="container">
 
-<nav>
-<ul class="productos-list">
-  @for(producto of Productos; track producto.id){
-  <li class="lista-productos">
-    <img class="img-producto" [src]="producto.fotoUrl" [alt]="producto.nombre">
-    <button class="button" (click)="verDetalle(producto.id)">{{ producto.nombre }}</button>
-    <button (click)="deleteProducto(producto.id)">Eliminar</button>
-  </li>
-  }
-</ul>
-</nav>
+  <div class="filtros-container">
+
+    <div class="search-box">
+      <input
+        type="text"
+        placeholder="Buscar por nombre..."
+        #txtBuscar
+        (input)="buscarProducto(txtBuscar.value)">
+        <button class="btn-buscar">🔍</button>
+    </div>
+
+    <div class="category-buttons">
+      <button class="btn-cat" (click)="getProductos()">Todos</button>
+      <button class="btn-cat" (click)="filtrarCategoria('Lácteos')">Lácteos</button>
+      <button class="btn-cat" (click)="filtrarCategoria('Bebidas')">Bebidas</button>
+      </div>
+
+  </div>
+
+  <nav>
+    <ul class="productos-list">
+      @for(producto of Productos; track producto.id){
+      <li class="lista-productos">
+        <img class="img-producto" [src]="producto.fotoUrl" [alt]="producto.nombre">
+        <button class="button" (click)="verDetalle(producto.id)">{{ producto.nombre }}</button>
+        <button (click)="deleteProducto(+producto.id)">Eliminar</button>
+      </li>
+      } @empty {
+        <p class="no-results">No se encontraron productos.</p>
+      }
+    </ul>
+  </nav>
 </section>

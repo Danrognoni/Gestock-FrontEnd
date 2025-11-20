@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Producto } from '../model/producto';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 
 @Injectable({
@@ -43,5 +43,22 @@ getProductos(): Observable<Producto[]> {
     const url = `${this.apiurl}/${id}`;
     return this.http.put<Producto>(url, data);
   }
+buscarProductos(termino: string): Observable<Producto[]> {
+    return this.getProductos().pipe(
+      map(productos => {
+        const terminoLower = termino.toLowerCase();
+
+        return productos.filter(p =>
+          p.nombre.toLowerCase().includes(terminoLower) ||
+          p.descripcion.toLowerCase().includes(terminoLower)
+        );
+      })
+    );
+  }
+
+getProductosPorCategoria(categoria: string): Observable<Producto[]> {
+  const url = `${this.apiurl}?categoria=${categoria}&_expand=proveedor&_expand=descuento`;
+  return this.http.get<Producto[]>(url);
+}
 
 }

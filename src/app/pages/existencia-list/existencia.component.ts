@@ -93,7 +93,5 @@ export class ExistenciaComponent implements OnInit{
     });
   }
 
-  volverAtras(){
-    this.route.navigate(['existencia/existenciaList']);
-  }
+
 }
