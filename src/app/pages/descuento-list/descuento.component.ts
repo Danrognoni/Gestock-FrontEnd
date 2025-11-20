@@ -2,10 +2,11 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { DescuentoService } from '../../services/descuento.service';
 import { Descuento } from '../../model/descuento';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-descuento',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './descuento.component.html',
   styleUrl: './descuento.component.css'
 })
