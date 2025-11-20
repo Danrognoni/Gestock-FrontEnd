@@ -5,8 +5,8 @@
       <article class="proveedor-card">
         <img [src]="proveedor.imagen" alt="Imagen de {{proveedor.nombre}}">
         <button class="button" (click)="proveedorDetail(proveedor.id)">{{ proveedor.nombre }}</button>
+        <button (click)="deleteProveedor(proveedor.id)">Eliminar</button>
       </article>
-      <button (click)="deleteProveedor(proveedor.id)">Eliminar</button>
     }
   </section>
 </div>
