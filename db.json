@@ -17,16 +17,7 @@
       "rol": "EMPLEADO"
     }
   ],
-  "proveedores": [
-    {
-      "nombre": "indio solario",
-      "telefono": 54252,
-      "email": "dadasd@gmail.com",
-      "direccion": "dasdasfa326ggds",
-      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScSgLNfWbYvjuahn4Ur0gGyCa79ZlBWh-8CA&s",
-      "id": "a30f"
-    }
-  ],
+  "proveedores": [],
   "descuentos": [
     {
       "id": "1",
@@ -96,18 +87,18 @@
   ],
   "existencias": [
     {
-      "cantidad": "250",
-      "fechaEntrada": "2025-10-20",
-      "fechaVencimiento": "2025-11-10",
-      "productoId": "1",
-      "id": "1"
-    },
-    {
       "id": "c80c",
       "cantidad": "600",
       "fechaEntrada": "2025-10-22",
       "fechaVencimiento": "2025-11-15",
       "productoId": "2"
+    },
+    {
+      "id": "ec4d",
+      "cantidad": "250",
+      "fechaEntrada": "2025-10-22",
+      "fechaVencimiento": "2025-11-10",
+      "productoId": "96aa"
     }
   ]
 }
