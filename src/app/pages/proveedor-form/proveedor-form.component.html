@@ -1,5 +1,5 @@
 <section class="form-container">
-  <h1 class="form-title">Agregar nuevo proveedor</h1>
+  <h1 class="form-title">{{isEditMode ? "Editar proveedor" : "Agregar nuevo proveedor"}}</h1>
   <form class="form-card" [formGroup]="proveedorForm" (ngSubmit)="onSubmit()">
     <fieldset>
       <div class="formulario">
@@ -52,6 +52,6 @@
         </label>
       </div>
     </fieldset>
-    <button type="submit" [disabled]="proveedorForm.invalid">Guardar</button>
+    <button type="submit" [disabled]="proveedorForm.invalid">{{!isEditMode ? "Guardar" : "Actualizar producto"}}</button>
   </form>
 </section>

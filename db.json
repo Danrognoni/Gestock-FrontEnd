@@ -19,20 +19,12 @@
   ],
   "proveedores": [
     {
-      "id": "a30f",
-      "nombre": "werwer",
+      "nombre": "indio solario",
       "telefono": 54252,
       "email": "dadasd@gmail.com",
       "direccion": "dasdasfa326ggds",
-      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScSgLNfWbYvjuahn4Ur0gGyCa79ZlBWh-8CA&s"
-    },
-    {
-      "id": "5849",
-      "nombre": "adsadsadsadsads",
-      "telefono": 252525252,
-      "email": "asadsd@gmail.com",
-      "direccion": "gdsgsgs",
-      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR738BJ0IlpN1tYoWuhmAbcMUIUp7yBoz-oOw&s"
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScSgLNfWbYvjuahn4Ur0gGyCa79ZlBWh-8CA&s",
+      "id": "a30f"
     }
   ],
   "descuentos": [

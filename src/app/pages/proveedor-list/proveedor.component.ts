@@ -32,12 +32,12 @@ export class ProveedorComponent {
     });
   }
 
-  proveedorDetail(id: number){
+  proveedorDetail(id: string){
     this.router.navigate(['proveedores/proveedorDetail/', id]);
 
   }
 
-  deleteProveedor(id:number){
+  deleteProveedor(id:string){
     if(confirm("Estás seguro de que deseas eliminar este proveedor?")){
       this.proveedorService.deleteProveedor(id).subscribe({
         next: () =>{
