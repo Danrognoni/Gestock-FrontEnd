@@ -73,4 +73,27 @@ export class ExistenciaComponent implements OnInit{
     }
   }
 
+  filtrarPorVencer() {
+    this.existenciaService.getExistenciasPorVencer(10).subscribe({
+      next: (data) => {
+        this.existencias = data;
+        if(data.length === 0) alert("No hay productos por vencer pronto.");
+      },
+      error: (e) => console.error(e)
+    });
+  }
+
+  filtrarBajoStock() {
+    this.existenciaService.getBajoStock(10).subscribe({
+      next: (data) => {
+        this.existencias = data;
+        if(data.length === 0) alert("Todo el stock está correcto (encima de 10).");
+      },
+      error: (e) => console.error(e)
+    });
+  }
+
+  volverAtras(){
+    this.route.navigate(['existencia/existenciaList']);
+  }
 }

@@ -108,6 +108,13 @@
       "fechaEntrada": "2025-10-22",
       "fechaVencimiento": "2025-11-10",
       "productoId": "96aa"
+    },
+    {
+      "id": "c160",
+      "cantidad": "6",
+      "fechaEntrada": "2025-10-22",
+      "fechaVencimiento": "2025-11-29",
+      "productoId": "2"
     }
   ]
 }

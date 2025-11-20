@@ -1,8 +1,8 @@
 <section class="existencia-container">
+  <button class="button" (click)="volverAtras()">Volver</button>
   <h1>Existencias</h1>
 
   <div class="existencias-grid">
-
     @for (existencia of existencias; track existencia.id) {
     <article class="existencia-card">
 
@@ -37,10 +37,21 @@
         Editar
       </button>
 
+
     </article>
     } @empty {
     <p class="empty-state">No se encontraron existencias.</p>
     }
+
+    <section class="existencia-container">
+
+        <div class="filtros-container" style="display: flex; gap: 10px; justify-content: center; margin-bottom: 20px;">
+          <button (click)="filtrarPorVencer()" style="background-color: #e11d48; color: white;"> Por Vencer </button>
+          <button (click)="filtrarBajoStock()" style="background-color: #f59e0b; color: black;"> Bajo Stock</button>
+        </div>
+
+      </section>
+
 
   </div>
 </section>
