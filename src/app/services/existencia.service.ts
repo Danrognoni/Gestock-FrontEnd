@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Existencia } from '../model/existencia';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -38,4 +38,18 @@ getExistencias(){
       const url = `${this.apiUrl}/${id}`;
       return this.http.put<Existencia>(url, data);
     }
+
+    getExistenciasPorVencer(dias: number): Observable<Existencia[]> {
+    return this.getExistencias().pipe(
+      map(lista => {
+        const hoy = new Date();
+        const fechaLimite = new Date();
+        fechaLimite.setDate(hoy.getDate() + dias);
+        return lista.filter(item => {
+          const fechaVenc = new Date(item.fechaVencimiento);
+          return fechaVenc >= hoy && fechaVenc <= fechaLimite;
+        });
+      })
+    );
+  }
 }
