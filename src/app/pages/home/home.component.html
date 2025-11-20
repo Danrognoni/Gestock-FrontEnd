@@ -1,1 +1,63 @@
 <app-navbar></app-navbar>
+
+<main class="dashboard-container">
+
+  <header class="dashboard-header">
+    <h1>Panel de Control</h1>
+    <p>Resumen general del sistema Gestock</p>
+  </header>
+
+  <section class="kpi-grid">
+
+    <div class="kpi-card blue">
+      <div class="kpi-icon">📦</div>
+      <div class="kpi-info">
+        <h3>Productos</h3>
+        <span class="kpi-value">{{ totalProductos() }}</span>
+        <p>Registrados</p>
+      </div>
+      <a routerLink="/productos" class="kpi-link">Gestionar &rarr;</a>
+    </div>
+
+    <div class="kpi-card purple">
+      <div class="kpi-icon">🚛</div>
+      <div class="kpi-info">
+        <h3>Proveedores</h3>
+        <span class="kpi-value">{{ totalProveedores() }}</span>
+        <p>Activos</p>
+      </div>
+      <a routerLink="/proveedores" class="kpi-link">Gestionar &rarr;</a>
+    </div>
+
+    <div class="kpi-card" [class.danger]="alertasStock() > 0 || alertasVencimiento() > 0" [class.green]="alertasStock() === 0 && alertasVencimiento() === 0">
+      <div class="kpi-icon">🚨</div>
+      <div class="kpi-info">
+        <h3>Alertas</h3>
+        <div class="alertas-resumen">
+          <span>📉 Stock Bajo: <strong>{{ alertasStock() }}</strong></span>
+          <span>📅 Vencimientos: <strong>{{ alertasVencimiento() }}</strong></span>
+        </div>
+      </div>
+      <a routerLink="/existencia" class="kpi-link">Revisar &rarr;</a>
+    </div>
+
+    <div class="kpi-card orange">
+      <div class="kpi-icon">🏷️</div>
+      <div class="kpi-info">
+        <h3>Ofertas</h3>
+        <span class="kpi-value">{{ descuentosActivos() }}</span>
+        <p>Disponibles</p>
+      </div>
+      <a routerLink="/descuento" class="kpi-link">Ver Ofertas &rarr;</a>
+    </div>
+
+  </section>
+
+  <section class="welcome-section">
+    <div class="welcome-card">
+      <h2>Bienvenido a Gestock</h2>
+      <p>Selecciona una opción del menú superior o utiliza las tarjetas de acceso rápido para comenzar a gestionar tu inventario.</p>
+    </div>
+  </section>
+
+</main>

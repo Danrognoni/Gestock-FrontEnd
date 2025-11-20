@@ -27,6 +27,7 @@ export class ProveedorDetailComponent implements OnInit{
       this.proveedorService.getProveedorById(id).subscribe({
         next : (data)=>{
           this.proveedor.set(data);
+          console.log("proveedor data", data);
         },
         error : (e)=>{
           console.error(e);
