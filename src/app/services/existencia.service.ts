@@ -52,4 +52,10 @@ getExistencias(){
       })
     );
   }
+
+  getBajoStock(limite: number): Observable<Existencia[]> {
+    return this.getExistencias().pipe(
+      map(lista => lista.filter(item => Number(item.cantidad) <= limite))
+    );
+  }
 }
