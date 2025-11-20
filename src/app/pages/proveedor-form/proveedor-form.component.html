@@ -52,6 +52,6 @@
         </label>
       </div>
     </fieldset>
-    <button type="submit" [disabled]="proveedorForm.invalid">Guardar</button>
+    <button type="submit" [disabled]="proveedorForm.invalid">{{!isEditMode ? "Guardar" : "Actualizar producto"}}</button>
   </form>
 </section>
