@@ -8,7 +8,7 @@ export interface Producto {
   categoria:string;
   precio:number;
   codigoBarras:string;
-  proveedorId:number;
+  proveedorId:string;
   descuentoId:number;
   fotoUrl : string;
   descuento?: Descuento;
