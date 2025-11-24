@@ -55,6 +55,13 @@
       "porcentaje": 67,
       "fechaInicio": "2026-05-15",
       "fechaFin": "2025-11-29"
+    },
+    {
+      "id": "d128",
+      "descripcion": "Cuenta DNI",
+      "porcentaje": 25,
+      "fechaInicio": "2025-11-20",
+      "fechaFin": "2025-12-01"
     }
   ],
   "productos": [

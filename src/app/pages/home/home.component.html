@@ -10,7 +10,7 @@
   <section class="kpi-grid">
 
     <div class="kpi-card blue">
-      <div class="kpi-icon">📦</div>
+      <div class="kpi-icon"></div>
       <div class="kpi-info">
         <h3>Productos</h3>
         <span class="kpi-value">{{ totalProductos() }}</span>
@@ -20,7 +20,7 @@
     </div>
 
     <div class="kpi-card purple">
-      <div class="kpi-icon">🚛</div>
+      <div class="kpi-icon"></div>
       <div class="kpi-info">
         <h3>Proveedores</h3>
         <span class="kpi-value">{{ totalProveedores() }}</span>
@@ -30,19 +30,19 @@
     </div>
 
     <div class="kpi-card" [class.danger]="alertasStock() > 0 || alertasVencimiento() > 0" [class.green]="alertasStock() === 0 && alertasVencimiento() === 0">
-      <div class="kpi-icon">🚨</div>
+      <div class="kpi-icon"></div>
       <div class="kpi-info">
         <h3>Alertas</h3>
         <div class="alertas-resumen">
-          <span>📉 Stock Bajo: <strong>{{ alertasStock() }}</strong></span>
-          <span>📅 Vencimientos: <strong>{{ alertasVencimiento() }}</strong></span>
+          <span> Stock Bajo: <strong>{{ alertasStock() }}</strong></span>
+          <span> Vencimientos: <strong>{{ alertasVencimiento() }}</strong></span>
         </div>
       </div>
       <a routerLink="/existencia" class="kpi-link">Revisar &rarr;</a>
     </div>
 
     <div class="kpi-card orange">
-      <div class="kpi-icon">🏷️</div>
+      <div class="kpi-icon"></div>
       <div class="kpi-info">
         <h3>Ofertas</h3>
         <span class="kpi-value">{{ descuentosActivos() }}</span>

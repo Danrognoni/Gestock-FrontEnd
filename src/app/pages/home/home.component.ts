@@ -57,7 +57,7 @@ export class HomeComponent implements OnInit {
 
         const hoy = new Date();
         const limite = new Date();
-        limite.setDate(hoy.getDate() + 7);
+        limite.setDate(hoy.getDate() + 40);
 
         const porVencer = data.filter(e => {
           const fecha = new Date(e.fechaVencimiento);
