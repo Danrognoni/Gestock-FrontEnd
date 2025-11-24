@@ -1,5 +1,5 @@
 <nav>
-  <a routerLink="/home">Home</a>
+  <a routerLink="/home">Inicio</a>
 
   @if (authService.currentUser()?.rol === 'ADMINISTRADOR') {
     <a routerLink="/productos">Gestión de Productos</a>
