@@ -8,6 +8,7 @@ import { ProductoService } from '../../services/producto.service';
 import { ProveedorService } from '../../services/proveedor.service';
 import { ExistenciaService } from '../../services/existencia.service';
 import { DescuentoService } from '../../services/descuento.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -23,7 +24,7 @@ export class HomeComponent implements OnInit {
   private proveedorService = inject(ProveedorService);
   private existenciaService = inject(ExistenciaService);
   private descuentoService = inject(DescuentoService);
-
+  public authService = inject(AuthService);
   public totalProductos = signal<number>(0);
   public totalProveedores = signal<number>(0);
   public alertasStock = signal<number>(0);

@@ -25,6 +25,14 @@
       "email": "sancorbsas@gmail.com",
       "direccion": "Necochea 5687",
       "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Sancor_coop_logo.svg/1200px-Sancor_coop_logo.svg.png"
+    },
+    {
+      "id": "861b",
+      "nombre": "Marolio",
+      "telefono": 2881403932,
+      "email": "marolioEmpresa@marolio.com",
+      "direccion": "dnadha9pda",
+      "imagen": "data:image/png;base64,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"
     }
   ],
   "descuentos": [
@@ -128,6 +136,20 @@
       "cantidad": "6",
       "fechaEntrada": "2025-10-22",
       "fechaVencimiento": "2025-11-29",
+      "productoId": "2"
+    },
+    {
+      "id": "3573",
+      "cantidad": "700",
+      "fechaEntrada": "2025-10-20",
+      "fechaVencimiento": "2029-5-15",
+      "productoId": "96aa"
+    },
+    {
+      "id": "cbb0",
+      "cantidad": "24",
+      "fechaEntrada": "2025-10-22",
+      "fechaVencimiento": "2025-11-15",
       "productoId": "2"
     }
   ]

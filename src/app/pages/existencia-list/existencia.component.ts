@@ -84,7 +84,7 @@ export class ExistenciaComponent implements OnInit{
   }
 
   filtrarBajoStock() {
-    this.existenciaService.getBajoStock(10).subscribe({
+    this.existenciaService.getBajoStock(30).subscribe({
       next: (data) => {
         this.existencias = data;
         if(data.length === 0) alert("Todo el stock está correcto (encima de 10).");

@@ -8,8 +8,8 @@
   </header>
 
   <section class="kpi-grid">
-
-    <div class="kpi-card blue">
+     @if (authService.currentUser()?.rol === 'ADMINISTRADOR'){
+        <div class="kpi-card blue">
       <div class="kpi-icon"></div>
       <div class="kpi-info">
         <h3>Productos</h3>
@@ -50,6 +50,34 @@
       </div>
       <a routerLink="/descuento" class="kpi-link">Ver Ofertas &rarr;</a>
     </div>
+     }
+
+     @if(authService.currentUser()?.rol==='EMPLEADO'){
+
+     <div class="kpi-card blue">
+      <div class="kpi-icon"></div>
+      <div class="kpi-info">
+        <h3>Productos</h3>
+        <span class="kpi-value">{{ totalProductos() }}</span>
+        <p>Registrados</p>
+      </div>
+      <a routerLink="/productos" class="kpi-link">Gestionar &rarr;</a>
+    </div>
+
+    <div class="kpi-card" [class.danger]="alertasStock() > 0 || alertasVencimiento() > 0" [class.green]="alertasStock() === 0 && alertasVencimiento() === 0">
+      <div class="kpi-icon"></div>
+      <div class="kpi-info">
+        <h3>Alertas</h3>
+        <div class="alertas-resumen">
+          <span> Stock Bajo: <strong>{{ alertasStock() }}</strong></span>
+          <span> Vencimientos: <strong>{{ alertasVencimiento() }}</strong></span>
+        </div>
+      </div>
+      <a routerLink="/existencia" class="kpi-link">Revisar &rarr;</a>
+    </div>
+
+
+     }
 
   </section>
 
