@@ -151,13 +151,6 @@
       "fechaEntrada": "2025-10-22",
       "fechaVencimiento": "2025-11-15",
       "productoId": "2"
-    },
-    {
-      "id": "ce88",
-      "cantidad": 600,
-      "fechaEntrada": "2025-02-20",
-      "fechaVencimiento": "2025-04-24",
-      "productoId": "96aa"
     }
   ]
 }
