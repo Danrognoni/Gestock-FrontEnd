@@ -30,7 +30,7 @@ export class ExistenciaFormComponent implements OnInit{
     this.existenciaForm=this.fb.group({
       cantidad: ['', Validators.required],
       fechaEntrada: ['', [Validators.required, Validators.max(this.anio)]],
-      fechaVencimiento: ['', Validators.required],
+      fechaVencimiento: ['', [Validators.required, Validators.min(this.anio)]],
       productoId : ['', Validators.required]
     })
   }
