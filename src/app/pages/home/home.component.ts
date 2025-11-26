@@ -52,7 +52,7 @@ export class HomeComponent implements OnInit {
     this.existenciaService.getExistencias().subscribe({
       next: (data) => {
 
-        const bajoStock = data.filter(e => Number(e.cantidad) < 10).length;
+        const bajoStock = data.filter(e => Number(e.cantidad) < 30).length;
         this.alertasStock.set(bajoStock);
 
 
