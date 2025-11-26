@@ -34,7 +34,7 @@ export class ProductoService {
     return this.http.get<any>(url + '?_expand=proveedor&_expand=descuento');
   }
 
-  deleteProducto(id: number) {
+  deleteProducto(id: string) {
     const url = `${this.apiurl}/${id}`;
     return this.http.delete(url);
   }

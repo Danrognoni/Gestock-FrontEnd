@@ -39,7 +39,7 @@ export class EmpleadoListComponent {
     if(confirm("Estás seguro de que desea eliminar este empleado?")){
       this.empleadoService.deleteEmpleado(id).subscribe({
         next: () => {
-          alert("Existencia eliminada con exito");
+          alert("Empleado eliminado con exito");
           this.empleados = this.empleados.filter(e => e.id !== id);
         }
         ,

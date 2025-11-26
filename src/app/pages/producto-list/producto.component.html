@@ -9,7 +9,6 @@
         placeholder="Buscar por nombre..."
         #txtBuscar
         (input)="buscarProducto(txtBuscar.value)">
-        <button class="btn-buscar">🔍</button>
     </div>
 
     <div class="category-buttons">
@@ -26,7 +25,7 @@
       <li class="lista-productos">
         <img class="img-producto" [src]="producto.fotoUrl" [alt]="producto.nombre">
         <button class="button" (click)="verDetalle(producto.id)">{{ producto.nombre }}</button>
-        <button (click)="deleteProducto(+producto.id)">Eliminar</button>
+        <button (click)="deleteProducto(producto.id)">Eliminar</button>
       </li>
       } @empty {
         <p class="no-results">No se encontraron productos.</p>

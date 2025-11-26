@@ -27,12 +27,12 @@
   ],
   "proveedores": [
     {
-      "id": "7095",
       "nombre": "Sancor",
       "telefono": 2281405939,
       "email": "sancorbsas@gmail.com",
       "direccion": "Necochea 5687",
-      "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Sancor_coop_logo.svg/1200px-Sancor_coop_logo.svg.png"
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Sancor_coop_logo.svg/1200px-Sancor_coop_logo.svg.png",
+      "id": "7095"
     },
     {
       "id": "861b",
@@ -85,9 +85,11 @@
       "nombre": "Leche descremada",
       "descripcion": "Leche descremada de vaca",
       "categoria": "Lácteos",
-      "precio": 120.5,
+      "precio": 120,
       "codigoBarras": "7790010001234",
       "fotoUrl": "https://statics.dinoonline.com.ar/imagenes/large_460x460/3260728_l.jpg",
+      "descuentoId": "",
+      "proveedorId": "7095",
       "id": "1"
     },
     {
@@ -100,28 +102,6 @@
       "descuentoId": "4",
       "proveedorId": "5",
       "id": "2"
-    },
-    {
-      "nombre": "Agua Mineral 1.5L",
-      "descripcion": "Agua mineral sin gas",
-      "categoria": "Bebidas",
-      "precio": 80.2,
-      "codigoBarras": "7790020003457",
-      "fotoUrl": "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/3040004_f.jpg",
-      "descuentoId": null,
-      "proveedorId": "2",
-      "id": "4"
-    },
-    {
-      "id": "96aa",
-      "nombre": "Chupetin",
-      "descripcion": "adsadsads",
-      "categoria": "adsadsadsads",
-      "precio": 54352,
-      "codigoBarras": 43643672,
-      "fotoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScSgLNfWbYvjuahn4Ur0gGyCa79ZlBWh-8CA&s",
-      "descuentoId": "4",
-      "proveedorId": "a30f"
     }
   ],
   "existencias": [
@@ -133,32 +113,18 @@
       "productoId": "2"
     },
     {
-      "id": "ec4d",
-      "cantidad": "250",
-      "fechaEntrada": "2025-10-22",
-      "fechaVencimiento": "2025-11-10",
-      "productoId": "96aa"
-    },
-    {
-      "id": "c160",
-      "cantidad": "6",
-      "fechaEntrada": "2025-10-22",
-      "fechaVencimiento": "2025-11-29",
-      "productoId": "2"
-    },
-    {
-      "id": "3573",
-      "cantidad": "700",
-      "fechaEntrada": "2025-10-20",
-      "fechaVencimiento": "2029-5-15",
-      "productoId": "96aa"
-    },
-    {
       "id": "cbb0",
       "cantidad": "24",
       "fechaEntrada": "2025-10-22",
       "fechaVencimiento": "2025-11-15",
       "productoId": "2"
+    },
+    {
+      "id": "c450",
+      "cantidad": 25,
+      "fechaEntrada": "2003-05-04",
+      "fechaVencimiento": "2025-05-04",
+      "productoId": "1"
     }
   ]
 }

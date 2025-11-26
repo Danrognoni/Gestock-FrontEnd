@@ -24,7 +24,7 @@ export class ProveedorFormComponent implements OnInit{
       telefono: ["", Validators.required],
       email: ["", [Validators.required, Validators.email]],
       direccion: ["", Validators.required],
-      imagen : ['', Validators.required]
+      imagen : ['']
     })
   }
   ngOnInit(): void {

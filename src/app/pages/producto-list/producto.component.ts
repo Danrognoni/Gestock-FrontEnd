@@ -50,7 +50,7 @@ export class ProductoComponent implements OnInit {
     this.productoSeleccionado = null;
   }
 
-  deleteProducto(id: number) {
+  deleteProducto(id: string) {
     if (confirm("Estás seguro de que deseas eliminar este producto")) {
 
 

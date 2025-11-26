@@ -39,7 +39,7 @@ export class ProductoFormComponent implements OnInit {
       precio : ['', [Validators.required, Validators.min(1)]],
       codigoBarras : [''],
       fotoUrl : [''],
-      descuentoId: ['', Validators.required],
+      descuentoId: [''],
       proveedorId : ['', Validators.required]
     })
   }

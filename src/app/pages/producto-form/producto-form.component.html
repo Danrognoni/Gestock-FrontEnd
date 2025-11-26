@@ -32,10 +32,12 @@
         <label for="precio">Precio</label>
         <input type="number" id="id-precio" formControlName="precio">
         @if(precio?.invalid && (precio?.touched)){
-        <p class="error-msg">El precio es obligatorio</p>
-        @if(precio?.hasError("min")){
-        <p class="error-msg">El precio no puede ser menor a 0</p>
-        }
+          @if(precio?.hasError("required")){
+            <p class="error-msg">El precio es obligatorio</p>
+          }
+          @if(precio?.hasError("min")){
+            <p class="error-msg">El precio no puede ser menor a 0</p>
+          }
         }
       </div>
 
