@@ -11,4 +11,5 @@ Ortega	Módulo Descuentos: Lógica para aplicar porcentajes y fechas de vigencia
 17/11/2025	Gianluca Castorina	Gestión de Existencias: Control de stock, fechas de entrada y vencimiento (ExistenciaService).	22/11	Se agregaron filtros visuales para "stock bajo" y productos "por vencer".
 18/11/2025	Joaquin Rodriguez Ortega	Dashboard en HomeComponent: Cálculo de KPIs (Total productos, alertas de stock, ofertas activas).	23/11	Se utilizaron signals de Angular para actualizar los contadores en tiempo real.
 21/11/2025	Todos	Integración final, revisión de estilos y pruebas de navegación.	24/11	Corrección de errores en la navegación del Navbar para mostrar opciones según el rol.
+25/11/2025 Gestion de empleados. Ahora un administrador puede dar de alta y de baja empleados. Realizado por Rodriguez ortega Joaquin.
 
