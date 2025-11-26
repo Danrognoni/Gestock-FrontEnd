@@ -15,6 +15,14 @@
       "username": "jperez",
       "password": "password123",
       "rol": "EMPLEADO"
+    },
+    {
+      "id": "6db8",
+      "nombre": "alpha",
+      "apellido": "sniper",
+      "username": "alphasniper",
+      "password": "password123",
+      "rol": "EMPLEADO"
     }
   ],
   "proveedores": [

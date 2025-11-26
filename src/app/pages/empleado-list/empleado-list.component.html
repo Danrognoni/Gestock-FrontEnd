@@ -1,0 +1,31 @@
+<h1>Empleados</h1>
+
+<section class="container">
+  <nav>
+    <ul class="empleados-list">
+      @for (empleado of empleados; track empleado.id) {
+        <li class="lista-empleados">
+
+          <div class="avatar-icon">👤</div>
+
+          <div class="info-empleado">
+            <span class="nombre">{{ empleado.nombre }} {{ empleado.apellido }}</span>
+
+            <span class="username">&#64;{{ empleado.username }}</span>
+
+            <span class="rol-badge"
+                  [class.admin]="empleado.rol === 'ADMINISTRADOR'"
+                  [class.empleado]="empleado.rol === 'EMPLEADO'">
+              {{ empleado.rol }}
+            </span>
+          </div>
+
+          <button class="btn-delete" (click)="deleteEmpleado(empleado.id)">Eliminar</button>
+        </li>
+      } @empty {
+        <p class="no-results">No se encontraron empleados cargados.</p>
+      }
+    </ul>
+  </nav>
+
+</section>

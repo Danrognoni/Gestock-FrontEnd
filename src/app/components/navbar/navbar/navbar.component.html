@@ -4,6 +4,7 @@
     <a routerLink="/proveedores">Gestión de Proveedores</a>
     <a routerLink="/descuento"> Gestion de Descuentos</a>
     <a routerLink="/existencia">Gestion de Existencias</a>
+    <a routerLink="/empleados">Gestion de Empleados</a>
   }
   @if (authService.currentUser()?.rol === 'EMPLEADO') {
     <a routerLink="/existencia">Gestion de  Existencias</a>

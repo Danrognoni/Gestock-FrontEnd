@@ -32,6 +32,9 @@ import { DescuentoFormComponent } from './pages/descuento-form/descuento-form.co
 // Componentes de "Guards"
 import { authGuardFnLogin } from './auth/guards/authGuardFnLogin';
 import { AuthGuardFnComponent } from './auth/guards/auth.guard.fn.component';
+import { EmpleadoNavComponent } from './components/empleado-nav-component/empleado-nav-component.component';
+import { EmpleadoListComponent } from './pages/empleado-list/empleado-list.component';
+import { EmpleadoFormComponent } from './pages/empleado-form/empleado-form.component';
 
 
 
@@ -97,6 +100,16 @@ export const routes: Routes = [
       { path: 'createExistencia', component: ExistenciaFormComponent },
       {path : 'editExistencia/:id', component:ExistenciaFormComponent},
       { path: 'existenciaDetail/:id', component: ExistenciaDetailComponent }
+    ]
+  },
+  {
+    path: 'empleados',
+    component: EmpleadoNavComponent,
+    canActivate: [AuthGuardFnComponent, adminGuard],
+    children: [
+      { path: '', redirectTo: 'empleadoList', pathMatch: 'full' },
+      { path: 'empleadoList', component: EmpleadoListComponent },
+      { path: 'createEmpleado', component: EmpleadoFormComponent }
     ]
   },
 
