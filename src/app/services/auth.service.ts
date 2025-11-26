@@ -3,7 +3,6 @@ import { inject, Injectable, signal } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario } from '../model/usuario';
 
-// Definimos un tipo simple para el rol
 export type UserRole = 'ADMINISTRADOR' | 'EMPLEADO' | null;
 
 @Injectable({
@@ -31,8 +30,6 @@ export class AuthService {
     })
     const user = localStorage.getItem('loggedUser');
     if(user){
-
-
       const userObj = JSON.parse(user);
       this.currentUser.set(userObj);
       this.estoyLogeado.set(true);

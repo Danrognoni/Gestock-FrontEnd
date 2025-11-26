@@ -1,4 +1,4 @@
-/* --- Título --- */
+
 h1 {
   text-align: center;
   margin: 2rem 0;
@@ -16,7 +16,7 @@ h1 {
   padding: 0 1.5rem;
 }
 
-/* --- Sección de Filtros y Búsqueda --- */
+
 .filtros-container {
   background-color: var(--bg-card);
   padding: 2rem;
@@ -30,16 +30,15 @@ h1 {
   box-shadow: var(--shadow);
 }
 
-/* Buscador */
 .search-box {
   display: flex;
-  gap: 0; /* Sin espacio para que parezca una sola pieza */
+  gap: 0;
   width: 100%;
   max-width: 600px;
   background-color: var(--bg-body);
   border-radius: 1rem;
   border: 1px solid var(--border);
-  overflow: hidden; /* Para recortar las esquinas internas */
+  overflow: hidden;
   transition: all 0.2s ease;
 }
 
@@ -75,7 +74,7 @@ h1 {
   border-color: var(--primary);
 }
 
-/* Categorías */
+
 .category-buttons {
   display: flex;
   gap: 0.75rem;
@@ -102,7 +101,7 @@ h1 {
   transform: translateY(-2px);
 }
 
-/* --- Lista de Productos (Grid) --- */
+
 .productos-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -144,8 +143,7 @@ h1 {
   transform: scale(1.02);
 }
 
-/* Botones de la tarjeta */
-/* Botón Principal (Nombre del producto / Ver Detalle) */
+
 .button {
   background-color: var(--bg-body);
   color: var(--text-main);
@@ -167,7 +165,7 @@ h1 {
   color: white;
 }
 
-/* Botón Eliminar (El que no tiene clase .button) */
+
 button:not(.button, .btn-buscar, .btn-cat) {
   background-color: transparent;
   color: var(--danger);

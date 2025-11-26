@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { NavbarComponent } from '../../components/navbar/navbar/navbar.component';
 
-// Servicios
+
 import { ProductoService } from '../../services/producto.service';
 import { ProveedorService } from '../../services/proveedor.service';
 import { ExistenciaService } from '../../services/existencia.service';
