@@ -36,7 +36,7 @@
             <p class="error-msg">La fecha inicio es obligatoria</p>
           }
           @if(fechaInicio?.hasError('min')){
-            <p class="error-msg">La fecha inicio es inválida</p>
+            <p class="error-msg">La fecha inicio no puede ser menor a {{fecha}}</p>
           }
         }
       </div>
@@ -46,10 +46,10 @@
         <input type="date" id="fechaFin" formControlName="fechaFin">
         @if(fechaFin?.invalid && (fechaFin?.touched)){
           @if(fechaFin?.hasError('required')){
-            <p class="error-msg">La fecha inicio es obligatoria</p>
+            <p class="error-msg">La fecha fin es obligatoria</p>
           }
           @if(fechaFin?.hasError('min')){
-            <p class="error-msg">La fecha inicio es inválida</p>
+            <p class="error-msg">La fecha fin es inválida, no puede ser menor a {{fecha}}</p>
           }
         }
       </div>
