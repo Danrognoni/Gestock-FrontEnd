@@ -35,6 +35,7 @@ import { AuthGuardFnComponent } from './auth/guards/auth.guard.fn.component';
 import { EmpleadoNavComponent } from './components/empleado-nav-component/empleado-nav-component.component';
 import { EmpleadoListComponent } from './pages/empleado-list/empleado-list.component';
 import { EmpleadoFormComponent } from './pages/empleado-form/empleado-form.component';
+import { AccessDeniedLoginComponent } from './pages/access-denied-login/access-denied-login.component';
 
 
 
@@ -49,6 +50,10 @@ export const routes: Routes = [
   {
     path: 'access-denied',
     component: AccessDeniedComponent
+  },
+  {
+    path: 'access-denied-login',
+    component: AccessDeniedLoginComponent
   },
 
   {

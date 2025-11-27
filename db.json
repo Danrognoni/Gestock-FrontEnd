@@ -106,32 +106,25 @@
   ],
   "existencias": [
     {
-      "id": "c80c",
-      "cantidad": "600",
-      "fechaEntrada": "2025-10-22",
-      "fechaVencimiento": "2025-11-15",
-      "productoId": "2"
-    },
-    {
-      "id": "cbb0",
-      "cantidad": "24",
-      "fechaEntrada": "2025-10-22",
-      "fechaVencimiento": "2025-11-15",
-      "productoId": "2"
-    },
-    {
-      "id": "c450",
-      "cantidad": 25,
-      "fechaEntrada": "2003-05-04",
-      "fechaVencimiento": "2025-05-04",
-      "productoId": "1"
-    },
-    {
-      "id": "b625",
-      "cantidad": 567,
+      "id": "3428",
+      "cantidad": 450,
       "fechaEntrada": "2025-11-27",
-      "fechaVencimiento": "2025-10-14",
+      "fechaVencimiento": "2025-11-30",
       "productoId": "1"
+    },
+    {
+      "id": "6dc9",
+      "cantidad": 567,
+      "fechaEntrada": "2025-11-19",
+      "fechaVencimiento": "2025-12-27",
+      "productoId": "2"
+    },
+    {
+      "id": "fdc8",
+      "cantidad": 4,
+      "fechaEntrada": "2025-11-24",
+      "fechaVencimiento": "2026-06-11",
+      "productoId": "2"
     }
   ]
 }

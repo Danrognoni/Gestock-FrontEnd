@@ -25,12 +25,14 @@ export class ExistenciaFormComponent implements OnInit{
   public productoService = inject ( ProductoService);
   public productos = signal<Producto[]>([]);
   readonly anio = new Date().getFullYear();
+  readonly fecha = new Date().getDay();
+  readonly mes = new Date().getMonth();
 
   constructor(){
     this.existenciaForm=this.fb.group({
       cantidad: ['', Validators.required],
       fechaEntrada: ['', [Validators.required, Validators.max(this.anio)]],
-      fechaVencimiento: ['', [Validators.required, Validators.min(this.anio)]],
+      fechaVencimiento: ['', [Validators.required, Validators.min(this.anio)], Validators.min(this.fecha), Validators.min(this.mes)],
       productoId : ['', Validators.required]
     })
   }

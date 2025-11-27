@@ -7,7 +7,7 @@ export const authGuardFnLogin=()=>{
   if(!localStorage.getItem('loggedUser')){
     return true;
   }else{
-    route.navigateByUrl('access-denied');
+    route.navigateByUrl('access-denied-login');
     return false;
   }
 }
