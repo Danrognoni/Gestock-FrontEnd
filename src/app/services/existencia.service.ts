@@ -24,17 +24,17 @@ getExistencias(){
     return this.http.post<Existencia>(this.apiUrl, data);
   }
 
-  getExistenciaById(id : number){
+  getExistenciaById(id : string){
     const url = `${this.apiUrl}/${id}`;
     return this.http.get<any>(url);
   }
 
-  deleteExistencia(id:number){
+  deleteExistencia(id:string){
     const url = `${this.apiUrl}/${id}`;
     return this.http.delete(url);
   }
 
-  updateExistencia(id:number|null, data : Existencia): Observable<Existencia>{
+  updateExistencia(id:string|null, data : Existencia): Observable<Existencia>{
       const url = `${this.apiUrl}/${id}`;
       return this.http.put<Existencia>(url, data);
     }

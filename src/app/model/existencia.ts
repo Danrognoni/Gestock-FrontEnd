@@ -1,7 +1,7 @@
 import { Producto } from "./producto";
 
 export interface Existencia {
-  id:number;
+  id:string;
   cantidad:number;
   fechaEntrada:Date;
   fechaVencimiento:Date;

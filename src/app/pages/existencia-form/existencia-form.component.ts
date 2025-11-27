@@ -20,7 +20,7 @@ export class ExistenciaFormComponent implements OnInit{
   public existenciaForm: FormGroup;
   private routes = inject(Router);
   private ruta = inject(ActivatedRoute);
-  existenciaId :number|null=null;
+  existenciaId :string|null=null;
   isEditMode : boolean = false;
   public productoService = inject ( ProductoService);
   public productos = signal<Producto[]>([]);
@@ -52,14 +52,14 @@ export class ExistenciaFormComponent implements OnInit{
      this.getProductos();
      const id = this.ruta.snapshot.paramMap.get('id');
      if(id){
-      this.existenciaId=+id;
+      this.existenciaId=id;
       this.isEditMode=true;
       this.loadExistenciaData(this.existenciaId);
      }
   }
 
-  loadExistenciaData(id : number){
-    this.existenciaService.getExistenciaById(+id).subscribe({
+  loadExistenciaData(id : string){
+    this.existenciaService.getExistenciaById(id).subscribe({
       next : (existencia)=>{
         this.existenciaForm.patchValue(existencia);
       },

@@ -125,6 +125,13 @@
       "fechaEntrada": "2003-05-04",
       "fechaVencimiento": "2025-05-04",
       "productoId": "1"
+    },
+    {
+      "id": "b625",
+      "cantidad": 567,
+      "fechaEntrada": "2025-11-27",
+      "fechaVencimiento": "2025-10-14",
+      "productoId": "1"
     }
   ]
 }

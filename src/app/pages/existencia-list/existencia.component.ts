@@ -37,7 +37,7 @@ export class ExistenciaComponent implements OnInit{
     })
   }
 
-  verDetalle(id : number){
+  verDetalle(id : string){
     this.route.navigate(['/existencia/existenciaDetail', id]);
   }
 
@@ -58,7 +58,7 @@ export class ExistenciaComponent implements OnInit{
     }
   });
 }
-  deleteExistencia(id:number){
+  deleteExistencia(id:string){
     if(confirm("Estás seguro de que desea eliminar esta existencia?")){
       this.existenciaService.deleteExistencia(id).subscribe({
         next: () => {

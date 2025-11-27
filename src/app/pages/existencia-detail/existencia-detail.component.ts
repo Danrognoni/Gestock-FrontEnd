@@ -24,7 +24,7 @@ export class ExistenciaDetailComponent {
   getExistenciaById(){
     const id = this.ruta.snapshot.paramMap.get('id');
     if(id){
-      this.existenciaRepository.getExistenciaById(+id).subscribe({
+      this.existenciaRepository.getExistenciaById(id).subscribe({
         next : (data)=>{
           this.existencia.set(data);
         },
